@@ -1,0 +1,13 @@
+.my-card-body{
+  height: calc(100vh - (55.05px + 40.05px));
+}
+
+.elipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fa-trash-alt:hover{
+  opacity: 0.5;
+}
