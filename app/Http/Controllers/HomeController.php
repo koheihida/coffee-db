@@ -34,6 +34,7 @@ class HomeController extends Controller
     public function store(Request $request)
     {
         $posts =$request->all();
+        $request->validate(['content'=> 'required']);
         DB::transaction(function() use($posts){
             $memo_id=Memo::insertGetId(['content'=>$posts['content'],'user_id' =>\Auth::id()]);
             $tag_exists = Tag::where('user_id','=',\Auth::id())->where('name','=',$posts['new_tag'])->exists();

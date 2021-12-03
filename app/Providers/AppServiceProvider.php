@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Models\Memo;
+use App\Models\Tag;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,12 +26,13 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->composer('*', function ($view){
-            $memos =Memo::select('memos.*')->where('user_id','=',\Auth::id())
-        ->whereNull('deleted_at')
-        ->orderBy('updated_at','DESC')
-        ->get();
-
-        $view->with('memos',$memos);
+            $memo_model = new Memo();
+            $memos = $memo_model -> getMyMemo();
+            $tags = Tag::where('user_id','=',\Auth::id())
+                ->whereNull('deleted_at')
+                ->orderBy('id','DESC')
+                ->get();  
+            $view->with('memos',$memos)->with('tags',$tags);
         });
     }
 }
