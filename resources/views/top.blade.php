@@ -120,9 +120,10 @@
                 <div>
                     <a class="navbar-brand top_btn" href="{{ url('/home') }}"><i class="fas fa-clipboard"></i>coffee memo</a>
                 </div> 
-  
-              </div> 
-
+                <div>
+                  <a class="navbar-brand top_btn" href="https://twitter.com/kohei_osaka"><i class="fab fa-twitter-square"></i>kohei©</a>
+                </div>
+              </div>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

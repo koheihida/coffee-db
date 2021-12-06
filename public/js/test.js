@@ -70,82 +70,82 @@ const judge = (elm) => {
     quizCount += 4
   }else if (elm.textContent === quiz[3].answers[0]){
     swal({
-      text: "My recommendation is・・・",
+      text: "coffee memoに飲んだコーヒーを記録してね！！",
       title: "ホンジュラス",
       icon: "success",
     })
     .then((value) => {
-      swal(`coffee memoに飲んだコーヒーを記録してね！！`);
+      open(window.location.href = '/home')
     });
     showEnd();
   }else if (elm.textContent === quiz[3].answers[1]){
     swal({
-      text: "My recommendation is・・・",
+      text: "coffee memoに飲んだコーヒーを記録してね！！",
       title: "グァテマラ",
       icon: "success",
     })
     .then((value) => {
-      swal(`coffee memoに飲んだコーヒーを記録してね！！`);
+      open(window.location.href = '/home')
     });
     showEnd();
   }else if (elm.textContent === quiz[4].answers[0]){
     swal({
-      text: "My recommendation is・・・",
+      text: "coffee memoに飲んだコーヒーを記録してね！！",
       title: "ブラジル",
       icon: "success",
     })
     .then((value) => {
-      swal(`coffee memoに飲んだコーヒーを記録してね！！`);
+      open(window.location.href = '/home')
     });
     showEnd();
   }else if (elm.textContent === quiz[4].answers[1]){
     swal({
-      text: "My recommendation is・・・",
+      text: "coffee memoに飲んだコーヒーを記録してね！！",
       title: "コロンビア",
       icon: "success",
     })
     .then((value) => {
-      swal(`coffee memoに飲んだコーヒーを記録してね！！`);
+      open(window.location.href = '/home')
     });
     showEnd();
   }else if (elm.textContent === quiz[5].answers[0]){
     swal({
-      text: "My recommendation is・・・",
+      text: "coffee memoに飲んだコーヒーを記録してね！！",
       title: "エチオピア",
       icon: "success",
     })
     .then((value) => {
-      swal(`coffee memoに飲んだコーヒーを記録してね！！`);
+      open(window.location.href = '/home')
     });
     showEnd();
   }else if (elm.textContent === quiz[5].answers[1]){
     swal({
-      text: "My recommendation is・・・",
+      text: "coffee memoに飲んだコーヒーを記録してね！！",
       title: "ルワンダ",
       icon: "success",
     })
     .then((value) => {
-      swal(`coffee memoに飲んだコーヒーを記録してね！！`);
+      open(window.location.href = '/home')
     });
     showEnd();
   }else if (elm.textContent === quiz[6].answers[0]){
     swal({
-      text: "My recommendation is・・・",
+      text: "coffee memoに飲んだコーヒーを記録してね！！",
       title: "ケニア",
       icon: "success",
     })
     .then((value) => {
-      swal(`coffee memoに飲んだコーヒーを記録してね！！`);
+      open(window.location.href = '/home')
     });
     showEnd();
   }else if (elm.textContent === quiz[6].answers[1]){
     swal({
-      text: "My recommendation is・・・",
+      text: "coffee memoに飲んだコーヒーを記録してね！！",
       title: "エチオピア　ナチュラルプロセス",
       icon: "success",
     })
     .then((value) => {
-      swal(`coffee memoに飲んだコーヒーを記録してね！！`);
+      open(window.location.href = '/home')
     });
     showEnd();
   }
@@ -154,10 +154,11 @@ const judge = (elm) => {
 
 
 const showEnd = (elm) => {
-  $question.style.visibility = 'hidden';
+  $question.textContent = 'hidden';
 
   const $items = $doc.getElementById('js-items');
   $items.style.visibility = 'hidden';
+  // open(window.location.href = '/home');
 };
 
 init();
