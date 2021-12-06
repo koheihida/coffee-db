@@ -11,3 +11,8 @@
 .fa-trash-alt:hover{
   opacity: 0.5;
 }
+
+.test_img{
+  background-image: url(https://mystyle.ucc.co.jp/magazine/wp-content/uploads/2019/06/1525_03.jpg);
+  background-size: cover;
+}

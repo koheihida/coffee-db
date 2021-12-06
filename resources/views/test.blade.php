@@ -20,6 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="/css/layout.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/test.css') }}">
 </head>
 <body>
     <div id="app">
@@ -33,7 +34,7 @@
                 </button>
                 <div>
                     <a class="navbar-brand" href="{{ url('/') }}"><i class="fas fa-coffee"></i>checker</a>
-                </div>
+                </div> 
                 <div>
                     <a class="navbar-brand" href="{{ url('/home') }}"><i class="fas fa-clipboard"></i>coffee memo</a>
                 </div> 
@@ -82,35 +83,29 @@
                 </div>
             </div>
         </nav>
-
-        <main class="">
-            <div class="row">
-                <div class="col-md-2 p-0">
-                    <div class="card">
-                        <div class="card-header">タグ一覧</div>
-                        <div class="card-body my-card-body">
-                                <a href="/" class="card-text d-block elipsis mb-2">Show all</a>
-                            @foreach($tags as $tag)
-                                <a href="/?tag={{$tag['id']}}" class="card-text d-block elipsis mb-2">{{$tag['name']}}</a>
-                            @endforeach
-                        </div>
-                    </div>
+    <div class="test_img">    
+          <div class="container">
+            
+            <div class="jumbotron mt-5">
+              <div class="d-flex justify-content-center">
+                <div id="js-question" class="alert alert-primary" role="alert">
+                  どんな気分になるコーヒーを選びたい？？
                 </div>
-                <div class="col-md-4 p-0">
-                    <div class="card">
-                        <div class="card-header d-flex justify-content-between">メモ一覧<a href="{{route('home')}}"><i class="fas fa-plus-square"></i></a></div>
-                        <div class="card-body my-card-body">
-                            @foreach($memos as $memo)
-                                <a href="/edit/{{$memo['id']}}" class="card-text d-block elipsis mb-2">{{$memo['content']}}</a>
-                            @endforeach
-                        </div>
-                    </div>
+              </div>
+              
+              <div id="js-items" class="d-flex justify-content-center">
+                <div class="m-2">
+                  <button type="button" id="js-btn-1" class="btn btn-primary">落ち着く</button>
                 </div>
-                <div class="col-md-6 p-0">
-                    @yield('content')
+                <div class="m-2">
+                  <button type="button" id="js-btn-2" class="btn btn-primary">元気になる</button>
                 </div>
+              </div>
             </div>
-        </main>
+          </div>
+          <script src='/js/test.js'></script>
+        </div>
     </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

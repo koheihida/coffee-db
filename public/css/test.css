@@ -1,0 +1,14 @@
+/* .test_img{
+  background-image: url(https://mystyle.ucc.co.jp/magazine/wp-content/uploads/2019/06/1525_03.jpg);
+  background-size: cover;
+} */
+
+body {
+  width: 100%;
+  height:100vh;
+  background-image: url(https://prtimes.jp/i/20637/15/resize/d20637-15-146005-3.jpg);  
+  background-position: center center; 
+  background-repeat: no-repeat;  
+  background-attachment: fixed; 
+  background-size: cover;
+ }

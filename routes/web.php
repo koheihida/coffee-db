@@ -15,12 +15,15 @@ use App\Http\Controllers\HomeController;
 */
 
 
-
+Route::get('/', function () {
+    return view('test');
+});
 Auth::routes();
 
-Route::get('/', [HomeController::class, 'index'])->name('index');
+// Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::post('/store', [HomeController::class, 'store'])->name('store');
 Route::get('/edit/{id}', [HomeController::class, 'edit'])->name('edit');
 Route::post('/update', [HomeController::class, 'update'])->name('update');
 Route::post('/destroy', [HomeController::class, 'destroy'])->name('destroy');
+Route::get('/test', [HomeController::class, 'index'])->name('test');
