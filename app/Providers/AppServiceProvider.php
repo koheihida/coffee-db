@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Models\Memo;
 use App\Models\Tag;
+use Illuminate\Support\Facades\Schema;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191);
         view()->composer('*', function ($view){
             $memo_model = new Memo();
             $memos = $memo_model -> getMyMemo();
