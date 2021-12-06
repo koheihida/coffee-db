@@ -20,6 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="/css/layout.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/test.css') }}">
 </head>
 <body>
     <div id="app">
@@ -33,7 +34,7 @@
                 </button>
                 <div>
                     <a class="navbar-brand" href="{{ url('/test') }}"><i class="fas fa-coffee"></i>checker</a>
-                </div>
+                </div> 
                 <div>
                     <a class="navbar-brand" href="{{ url('/home') }}"><i class="fas fa-clipboard"></i>coffee memo</a>
                 </div> 
@@ -82,35 +83,46 @@
                 </div>
             </div>
         </nav>
+                
 
-        <main class="">
-            <div class="row">
-                <div class="col-md-2 p-0">
-                    <div class="card">
-                        <div class="card-header">タグ一覧</div>
-                        <div class="card-body my-card-body">
-                                <a href="/" class="card-text d-block elipsis mb-2">Show all</a>
-                            @foreach($tags as $tag)
-                                <a href="/?tag={{$tag['id']}}" class="card-text d-block elipsis mb-2">{{$tag['name']}}</a>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 p-0">
-                    <div class="card">
-                        <div class="card-header d-flex justify-content-between">メモ一覧<a href="{{route('home')}}"><i class="fas fa-plus-square"></i></a></div>
-                        <div class="card-body my-card-body">
-                            @foreach($memos as $memo)
-                                <a href="/edit/{{$memo['id']}}" class="card-text d-block elipsis mb-2">{{$memo['content']}}</a>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 p-0">
-                    @yield('content')
-                </div>
-            </div>
-        </main>
-    </div>
+                <meta name="viewport" content="width=device-width,initial-scale=1.0">
+                <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+                <link rel="stylesheet" href="{{ asset('css/test.css') }}">
+                <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+                <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/css/6-3-1.css">
+                </head>
+
+                <body>
+                <header id="header">
+                  <h1>What kind of coffee??</h1>
+                    <div id="video-area">
+                  <video id="video" poster="https://vod-progressive.akamaized.net/exp=1638811964~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F215%2F24%2F601076794%2F2821873012.mp4~hmac=6e7885839a5754ed156e882778cecfb32b6aec278c594b8e6e698ea9312d0ac0/vimeo-prod-skyfire-std-us/01/215/24/601076794/2821873012.mp4?filename=Coffee+-+87121.mp4" webkit-playsinline playsinline muted autoplay loop>
+                    <!--
+                        poster：動画ファイルが利用できない環境で代替表示される画像
+                        webkit-playsinline：iOS 9までのSafari用インライン再生指定
+                        playsinline：iOS 10以降のSafari用インライン再生指定
+                        muted：音声をミュートさせる
+                        autoplay：動画を自動再生させる
+                        loop：動画をループさせる
+                        controls：コントロールバーを表示する
+                    -->
+                  <source src="https://vod-progressive.akamaized.net/exp=1638811964~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F215%2F24%2F601076794%2F2821873012.mp4~hmac=6e7885839a5754ed156e882778cecfb32b6aec278c594b8e6e698ea9312d0ac0/vimeo-prod-skyfire-std-us/01/215/24/601076794/2821873012.mp4?filename=Coffee+-+87121.mp4" type="video/mp4">
+                  <source src="https://vod-progressive.akamaized.net/exp=1638811964~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F215%2F24%2F601076794%2F2821873012.mp4~hmac=6e7885839a5754ed156e882778cecfb32b6aec278c594b8e6e698ea9312d0ac0/vimeo-prod-skyfire-std-us/01/215/24/601076794/2821873012.mp4?filename=Coffee+-+87121.mp4" type="video/ogv">
+                  <source src="https://vod-progressive.akamaized.net/exp=1638811964~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F215%2F24%2F601076794%2F2821873012.mp4~hmac=6e7885839a5754ed156e882778cecfb32b6aec278c594b8e6e698ea9312d0ac0/vimeo-prod-skyfire-std-us/01/215/24/601076794/2821873012.mp4?filename=Coffee+-+87121.mp4" type="video/webm">
+                  <p>動画を再生できる環境ではありません。</p>
+                  </video>
+                    <!--/video-area--></div>
+                </header>
+                <div id="container">
+                <div>
+                    <a class="navbar-brand top_btn" href="{{ url('/test') }}"><i class="fas fa-coffee"></i>checker</a>
+                </div> 
+                <div>
+                    <a class="navbar-brand top_btn" href="{{ url('/home') }}"><i class="fas fa-clipboard"></i>coffee memo</a>
+                </div> 
+  
+              </div> 
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

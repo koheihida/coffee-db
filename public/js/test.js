@@ -69,23 +69,84 @@ const judge = (elm) => {
   }else if (elm.textContent === quiz[2].answers[1]){
     quizCount += 4
   }else if (elm.textContent === quiz[3].answers[0]){
-    swal("Hello world!");
-    // $window.alert('あなたにおすすめはホンジュラスです！');
+    swal({
+      text: "My recommendation is・・・",
+      title: "ホンジュラス",
+      icon: "success",
+    })
+    .then((value) => {
+      swal(`coffee memoに飲んだコーヒーを記録してね！！`);
+    });
+    showEnd();
   }else if (elm.textContent === quiz[3].answers[1]){
-    $window.alert('あなたにおすすめはグァテマラです！');
+    swal({
+      text: "My recommendation is・・・",
+      title: "グァテマラ",
+      icon: "success",
+    })
+    .then((value) => {
+      swal(`coffee memoに飲んだコーヒーを記録してね！！`);
+    });
+    showEnd();
   }else if (elm.textContent === quiz[4].answers[0]){
-    $window.alert('あなたにおすすめはブラジルです！');
+    swal({
+      text: "My recommendation is・・・",
+      title: "ブラジル",
+      icon: "success",
+    })
+    .then((value) => {
+      swal(`coffee memoに飲んだコーヒーを記録してね！！`);
+    });
+    showEnd();
   }else if (elm.textContent === quiz[4].answers[1]){
-    $window.alert('あなたにおすすめはコロンビアです！');
+    swal({
+      text: "My recommendation is・・・",
+      title: "コロンビア",
+      icon: "success",
+    })
+    .then((value) => {
+      swal(`coffee memoに飲んだコーヒーを記録してね！！`);
+    });
+    showEnd();
   }else if (elm.textContent === quiz[5].answers[0]){
-    $window.alert('あなたにおすすめはエチオピアです！');
+    swal({
+      text: "My recommendation is・・・",
+      title: "エチオピア",
+      icon: "success",
+    })
+    .then((value) => {
+      swal(`coffee memoに飲んだコーヒーを記録してね！！`);
+    });
+    showEnd();
   }else if (elm.textContent === quiz[5].answers[1]){
-    $window.alert('あなたにおすすめはルワンダです！');
+    swal({
+      text: "My recommendation is・・・",
+      title: "ルワンダ",
+      icon: "success",
+    })
+    .then((value) => {
+      swal(`coffee memoに飲んだコーヒーを記録してね！！`);
+    });
+    showEnd();
   }else if (elm.textContent === quiz[6].answers[0]){
-    $window.alert('あなたにおすすめはケニアです！');
+    swal({
+      text: "My recommendation is・・・",
+      title: "ケニア",
+      icon: "success",
+    })
+    .then((value) => {
+      swal(`coffee memoに飲んだコーヒーを記録してね！！`);
+    });
     showEnd();
   }else if (elm.textContent === quiz[6].answers[1]){
-    $window.alert('あなたにおすすめはエチオピア　ナチュラルプロセスです！');
+    swal({
+      text: "My recommendation is・・・",
+      title: "エチオピア　ナチュラルプロセス",
+      icon: "success",
+    })
+    .then((value) => {
+      swal(`coffee memoに飲んだコーヒーを記録してね！！`);
+    });
     showEnd();
   }
   goToNext();
@@ -93,8 +154,8 @@ const judge = (elm) => {
 
 
 const showEnd = (elm) => {
-  $question.textContent = '店員さんに相談してみて！！';
-  debugger;
+  $question.style.visibility = 'hidden';
+
   const $items = $doc.getElementById('js-items');
   $items.style.visibility = 'hidden';
 };

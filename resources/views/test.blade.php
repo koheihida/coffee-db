@@ -26,14 +26,14 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/home') }}">
+                <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div>
-                    <a class="navbar-brand" href="{{ url('/') }}"><i class="fas fa-coffee"></i>checker</a>
+                    <a class="navbar-brand" href="{{ url('/test') }}"><i class="fas fa-coffee"></i>checker</a>
                 </div> 
                 <div>
                     <a class="navbar-brand" href="{{ url('/home') }}"><i class="fas fa-clipboard"></i>coffee memo</a>
@@ -83,28 +83,29 @@
                 </div>
             </div>
         </nav>
-    <div class="test_img">    
+    <div class="test_img">
+      <div class="box">   
           <div class="container">
-            
-            <div class="jumbotron mt-5">
-              <div class="d-flex justify-content-center">
-                <div id="js-question" class="alert alert-primary" role="alert">
-                  どんな気分になるコーヒーを選びたい？？
+              <div class="jumbotron mt-5">
+                <div class="d-flex justify-content-center">
+                  <div id="js-question" class="alert alert-primary" role="alert">
+                    どんな気分になるコーヒーを選びたい？？
+                  </div>
                 </div>
-              </div>
-              
-              <div id="js-items" class="d-flex justify-content-center">
-                <div class="m-2">
-                  <button type="button" id="js-btn-1" class="btn btn-primary">落ち着く</button>
-                </div>
-                <div class="m-2">
-                  <button type="button" id="js-btn-2" class="btn btn-primary">元気になる</button>
+                
+                <div id="js-items" class="d-flex justify-content-center">
+                  <div class="m-2">
+                    <button type="button" id="js-btn-1" class="btn btn-primary">落ち着く</button>
+                  </div>
+                  <div class="m-2">
+                    <button type="button" id="js-btn-2" class="btn btn-primary">元気になる</button>
+                  </div>
                 </div>
               </div>
             </div>
+            <script src='/js/test.js'></script>
           </div>
-          <script src='/js/test.js'></script>
-        </div>
+      </div>  
     </div>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>

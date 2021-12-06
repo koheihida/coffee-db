@@ -31,4 +31,5 @@
         <button type="submit" class="btn btn-outline-secondary">更新</button>
     </form>
 </div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @endsection

@@ -16,6 +16,9 @@ use App\Http\Controllers\HomeController;
 
 
 Route::get('/', function () {
+    return view('top');
+});
+Route::get('/test', function () {
     return view('test');
 });
 Auth::routes();
@@ -26,4 +29,3 @@ Route::post('/store', [HomeController::class, 'store'])->name('store');
 Route::get('/edit/{id}', [HomeController::class, 'edit'])->name('edit');
 Route::post('/update', [HomeController::class, 'update'])->name('update');
 Route::post('/destroy', [HomeController::class, 'destroy'])->name('destroy');
-Route::get('/test', [HomeController::class, 'index'])->name('test');
