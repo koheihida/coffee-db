@@ -94,7 +94,7 @@
                 <header id="header">
                   <h1>What kind of coffee??</h1>
                     <div id="video-area">
-                  <video id="video" poster="https://vod-progressive.akamaized.net/exp=1638951820~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F215%2F24%2F601076794%2F2821873012.mp4~hmac=ffc8351df2041deba4a830932cc1d9a1641bc6f7ec1711b22ee7a3d8ba4674fc/vimeo-prod-skyfire-std-us/01/215/24/601076794/2821873012.mp4?filename=Coffee+-+87121.mp4" webkit-playsinline playsinline muted autoplay loop>
+                  <video id="video" poster="image/Coffee - top.mp4" webkit-playsinline playsinline muted autoplay loop>
                     <!--
                         poster：動画ファイルが利用できない環境で代替表示される画像
                         webkit-playsinline：iOS 9までのSafari用インライン再生指定
@@ -104,9 +104,9 @@
                         loop：動画をループさせる
                         controls：コントロールバーを表示する
                     -->
-                  <source src="https://vod-progressive.akamaized.net/exp=1638951820~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F215%2F24%2F601076794%2F2821873012.mp4~hmac=ffc8351df2041deba4a830932cc1d9a1641bc6f7ec1711b22ee7a3d8ba4674fc/vimeo-prod-skyfire-std-us/01/215/24/601076794/2821873012.mp4?filename=Coffee+-+87121.mp4" type="video/mp4">
-                  <source src="https://vod-progressive.akamaized.net/exp=1638951820~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F215%2F24%2F601076794%2F2821873012.mp4~hmac=ffc8351df2041deba4a830932cc1d9a1641bc6f7ec1711b22ee7a3d8ba4674fc/vimeo-prod-skyfire-std-us/01/215/24/601076794/2821873012.mp4?filename=Coffee+-+87121.mp4" type="video/ogv">
-                  <source src="https://vod-progressive.akamaized.net/exp=1638951820~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F215%2F24%2F601076794%2F2821873012.mp4~hmac=ffc8351df2041deba4a830932cc1d9a1641bc6f7ec1711b22ee7a3d8ba4674fc/vimeo-prod-skyfire-std-us/01/215/24/601076794/2821873012.mp4?filename=Coffee+-+87121.mp4" type="video/webm">
+                  <source src="image/Coffee - top.mp4" type="video/mp4">
+                  <source src="image/Coffee - top.mp4" type="video/ogv">
+                  <source src="image/Coffee - top.mp4" type="video/webm">
                   <p>動画を再生できる環境ではありません。</p>
                   </video>
                     <!--/video-area--></div>
@@ -119,7 +119,7 @@
                     <a class="navbar-brand top_btn" href="{{ url('/home') }}"><i class="fas fa-clipboard"></i>coffee memo</a>
                 </div> 
                 <div>
-                  <a class="navbar-brand top_btn" href="https://twitter.com/kohei_osaka"><i class="fab fa-twitter-square"></i>kohei©</a>
+                  <a class="navbar-brand top_btn" href="https://twitter.com/kohei_osaka"><i class="fab fa-twitter-square"></i>kohei</a>
                 </div>
               </div>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

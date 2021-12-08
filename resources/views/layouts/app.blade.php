@@ -89,9 +89,9 @@
                     <div class="card">
                         <div class="card-header">タグ一覧</div>
                         <div class="card-body my-card-body">
-                                <a href="/" class="card-text d-block elipsis mb-2">Show all</a>
+                                <a href="/home" class="card-text d-block elipsis mb-2">Show all</a>
                             @foreach($tags as $tag)
-                                <a href="/?tag={{$tag['id']}}" class="card-text d-block elipsis mb-2">{{$tag['name']}}</a>
+                                <a href="/home/?tag={{$tag['id']}}" class="card-text d-block elipsis mb-2">{{$tag['name']}}</a>
                             @endforeach
                         </div>
                     </div>
