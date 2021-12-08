@@ -16,6 +16,7 @@ class CreateMemosTable extends Migration
         Schema::create('memos', function (Blueprint $table) {
             $table->unsignedBigInteger('id' ,true);
             $table->longText('content');
+            // $table->blob('image');
             $table->unsignedBigInteger('user_id');
             $table->softDeletes();
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));

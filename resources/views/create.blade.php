@@ -4,6 +4,7 @@
 <div class="card">
     <div class="card-header">新規メモ</div>
     <form class="card-body my-card-body" action="{{ route('store')}}" method="POST">
+    <!-- enctype="multipart/form-data" -->
         @csrf
         <div class="form-floating">
             <textarea class="form-control mb-5" name="content" style="height: 100px" placeholder="新しいメモ"></textarea>
@@ -18,6 +19,10 @@
             </div>
         @endforeach
         <input type="text" class="form-control w-50 mb-5 elipsis" name="new_tag" placeholder="新しいタグ">
+        <!-- <div class="form-group">
+            <label for="image"></label>
+            <input type="file" class="form-control-file" name="image" id="image">
+        </div> -->
         <button type="submit" class="btn btn-outline-secondary">保存</button>
     </form>
 </div>

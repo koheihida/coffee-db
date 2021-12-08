@@ -39,9 +39,17 @@ class HomeController extends Controller
     public function store(Request $request)
     {
         $posts =$request->all();
+        // $image = $request->file('image');
+        // if($request->hasFile('image')){
+        //     $path = \Storage::put('/public',$image);
+        //     $path = explode('/',$path);
+        // }else{
+        //     $path = null;
+        // }
         $request->validate(['content'=> 'required']);
         DB::transaction(function() use($posts){
-            $memo_id=Memo::insertGetId(['content'=>$posts['content'],'user_id' =>\Auth::id()]);
+            $memo_id=Memo::insertGetId(['content'=>$posts['content'],'user_id' =>\Auth::id() ]);
+            // 'image'=>$posts['image']
             $tag_exists = Tag::where('user_id','=',\Auth::id())->where('name','=',$posts['new_tag'])->exists();
             if(!empty($posts['new_tag'] || $posts['new_tag'] === "0") && !$tag_exists){
                 $tag_id = Tag::insertGetId(['user_id' => \Auth::id(), 'name'=> $posts['new_tag']]);
@@ -63,9 +71,12 @@ class HomeController extends Controller
             ->leftJoin('tags','memo_tags.tag_id','=','tags.id')
             ->where('memos.user_id','=',\Auth::id())
             ->where('memos.id','=',$id)
+            // ->where('memos.image')
             ->whereNull('memos.deleted_at')
             ->get();
-        
+            // dd(Memo);
+            // $image = Memo::where('user_id','=',\Auth::id())->where('image')->get();
+            // dd($image);
         $include_tags = [];
         foreach($edit_memo as $memo){
             array_push($include_tags, $memo['tag_id']);

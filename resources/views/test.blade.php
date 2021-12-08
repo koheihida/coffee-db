@@ -117,7 +117,7 @@
                         </div>
                 </div>  
                     <div id="video-area">
-                  <video id="video" poster="image/Espresso - 31383.mp4" webkit-playsinline playsinline muted autoplay loop>
+                  <video id="video" poster="image/Coffee - test.mp4" webkit-playsinline playsinline muted autoplay loop>
                     <!--
                         poster：動画ファイルが利用できない環境で代替表示される画像
                         webkit-playsinline：iOS 9までのSafari用インライン再生指定
@@ -127,9 +127,9 @@
                         loop：動画をループさせる
                         controls：コントロールバーを表示する
                     -->
-                  <source src="image/Espresso - 31383.mp4" type="video/mp4">
-                  <source src="image/Espresso - 31383.mp4" type="video/ogv">
-                  <source src="image/Espresso - 31383.mp4" type="video/webm">
+                  <source src="image/Coffee - test.mp4" type="video/mp4">
+                  <source src="image/Coffee - test.mp4" type="video/ogv">
+                  <source src="image/Coffee - test.mp4" type="video/webm">
                   <p>動画を再生できる環境ではありません。</p>
                   </video>
                     <!--/video-area--></div>
