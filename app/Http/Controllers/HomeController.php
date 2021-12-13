@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Memo;
-use App\models\Tag;
-use App\models\MemoTag;
+use App\Models\Tag;
+use App\Models\MemoTag;
 use DB;
 
 class HomeController extends Controller
