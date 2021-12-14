@@ -2,7 +2,7 @@
 what-kind-of-coffee??
 
 # TOPページ
-[![Image from Gyazo](https://i.gyazo.com/a780e97ac250090257fb8a20b736f391.gif)](https://gyazo.com/a780e97ac250090257fb8a20b736f391)
+[![Image from Gyazo](https://i.gyazo.com/82a689bdac0379a64482dabc16bda2e8.gif)](https://gyazo.com/82a689bdac0379a64482dabc16bda2e8)
 
 # 診断ページ
 質問を答えていくとオススメのコーヒーをアテンドしてくれるその後メモページに遷移する
