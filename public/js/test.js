@@ -46,12 +46,11 @@ const init = () => {
 };
 
 const goToNext = () => {
-  // quizCount++;
+
   if(quizCount < quizLen){
     init(quizCount);
   } else {
-    // $window.alert('クイズ終了！');
-    // showEnd();
+    
     window.location.href = '/load';
   }
 };
@@ -78,7 +77,6 @@ const judge = (elm) => {
     .then((value) => {
       open(window.location.href = '/load')
     });
-    // showEnd();
   }else if (elm.textContent === quiz[3].answers[1]){
     swal({
       text: "coffee memoに飲んだコーヒーを記録してね！！",
@@ -88,7 +86,6 @@ const judge = (elm) => {
     .then((value) => {
       open(window.location.href ='/load')
     });
-    // showEnd();
   }else if (elm.textContent === quiz[4].answers[0]){
     swal({
       text: "coffee memoに飲んだコーヒーを記録してね！！",
@@ -98,7 +95,6 @@ const judge = (elm) => {
     .then((value) => {
       open(window.location.href ='/load')
     });
-    // showEnd();
   }else if (elm.textContent === quiz[4].answers[1]){
     swal({
       text: "coffee memoに飲んだコーヒーを記録してね！！",
@@ -108,7 +104,6 @@ const judge = (elm) => {
     .then((value) => {
       open(window.location.href ='/load')
     });
-    // showEnd();
   }else if (elm.textContent === quiz[5].answers[0]){
     swal({
       text: "coffee memoに飲んだコーヒーを記録してね！！",
@@ -118,7 +113,6 @@ const judge = (elm) => {
     .then((value) => {
       open(window.location.href ='/load')
     });
-    // showEnd();
   }else if (elm.textContent === quiz[5].answers[1]){
     swal({
       text: "coffee memoに飲んだコーヒーを記録してね！！",
@@ -128,7 +122,6 @@ const judge = (elm) => {
     .then((value) => {
       open(window.location.href ='/load')
     });
-    // showEnd();
   }else if (elm.textContent === quiz[6].answers[0]){
     swal({
       text: "coffee memoに飲んだコーヒーを記録してね！！",
@@ -138,18 +131,15 @@ const judge = (elm) => {
     .then((value) => {
       open(window.location.href ='/load')
     });
-    // showEnd();
   }else if (elm.textContent === quiz[6].answers[1]){
-    // swal({
-    //   text: "coffee memoに飲んだコーヒーを記録してね！！",
-    //   title: "エチオピア　ナチュラルプロセス",
-    //   icon: "success",
-    // })
-    // .then((value) => {
+    swal({
+      text: "coffee memoに飲んだコーヒーを記録してね！！",
+      title: "エチオピア　ナチュラルプロセス",
+      icon: "success",
+    })
+    .then((value) => {
       open(window.location.href ='/load');
-    // });
-    // showEnd();
-    // open(window.location.href ='/load')
+    });
   }
   goToNext();
 };
