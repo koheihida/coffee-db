@@ -30,7 +30,7 @@
   <div class="sp"></div>
     <h5>One of the trivia about coffee!!</h5>
     <div class="mt-3">
-              <?php $draw = rand(1,5);
+              <?php $draw = rand(1,20);
                 if ($draw == 1){
                   $result = '1、エスプレッソを日本語にすると"表現"';
                 } elseif ($draw == 2){
