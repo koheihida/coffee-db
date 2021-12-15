@@ -7,6 +7,10 @@ https://what-kind-of-coffee.link/
 mail：mmm@gmail
 パスワード：mmmm2222
 
+# 課題修正
+リリース後、このアプリケーションを開きたいと思うようなワクワク感がないとのコメントがあったため
+メモページに遷移前にコーヒーの豆知識をランダムに表示するローディング画面を経由し5秒後メモページに遷移する様に実装しました。
+[![Image from Gyazo](https://i.gyazo.com/5a0df7e318cc589945baa09018635359.gif)](https://gyazo.com/5a0df7e318cc589945baa09018635359)
 
 # TOPページ
 [![Image from Gyazo](https://i.gyazo.com/82a689bdac0379a64482dabc16bda2e8.gif)](https://gyazo.com/82a689bdac0379a64482dabc16bda2e8)
@@ -15,18 +19,11 @@ mail：mmm@gmail
 質問を答えていくとオススメのコーヒーをアテンドしてくれるその後メモページに遷移する
 [![Image from Gyazo](https://i.gyazo.com/8771aeb8d162779b1acd03f0cb3e9b6b.gif)](https://gyazo.com/8771aeb8d162779b1acd03f0cb3e9b6b)
 
-# メモページ 投稿
-[![Image from Gyazo](https://i.gyazo.com/9bc76aca29b03b9e98c5426feb57c75d.gif)](https://gyazo.com/9bc76aca29b03b9e98c5426feb57c75d)
-
 # メモページ タグから絞り込み
 [![Image from Gyazo](https://i.gyazo.com/f1445870624134ed4b8f66684c8a1eab.gif)](https://gyazo.com/f1445870624134ed4b8f66684c8a1eab)
 
-# メモページ 削除機能
-[![Image from Gyazo](https://i.gyazo.com/66fa51ca016b40d69c4bfd25beda82bd.gif)](https://gyazo.com/66fa51ca016b40d69c4bfd25beda82bd)
-
 # メモページ 編集機能
 [![Image from Gyazo](https://i.gyazo.com/a2ce3b1ab01f8f0182d2ece199ebb855.gif)](https://gyazo.com/a2ce3b1ab01f8f0182d2ece199ebb855)
-
 
 
 # 目的
