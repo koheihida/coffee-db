@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
+    <link rel="icon" type="image/png" href="image/icon.png">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="/css/layout.css" rel="stylesheet">
@@ -37,7 +38,7 @@
                     <a class="navbar-brand" href="{{ url('/test') }}"><i class="fas fa-coffee"></i>checker</a>
                 </div>
                 <div>
-                    <a class="navbar-brand" href="{{ url('/home') }}"><i class="fas fa-clipboard"></i>coffee memo</a>
+                    <a class="navbar-brand" href="{{ url('/load') }}"><i class="fas fa-clipboard"></i>coffee memo</a>
                 </div> 
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">

@@ -34,6 +34,8 @@ class HomeController extends Controller
     {
         $tags = Tag::where('user_id','=',\Auth::id())->whereNull('deleted_at')->orderBy('id','DESC')->get();
         return view('create',compact('tags'));
+
+
     }
 
     public function store(Request $request)
@@ -47,6 +49,7 @@ class HomeController extends Controller
         //     $path = null;
         // }
         $request->validate(['content'=> 'required']);
+        $request->validate(['tags'=> 'required']);
         DB::transaction(function() use($posts){
             $memo_id=Memo::insertGetId(['content'=>$posts['content'],'user_id' =>\Auth::id() ]);
             // 'image'=>$posts['image']
@@ -89,6 +92,7 @@ class HomeController extends Controller
     {
         $posts =$request->all();
         $request->validate(['content'=> 'required']);
+        $request->validate(['tags'=> 'required']);
         DB::transaction(function () use($posts){
             Memo::where('id',$posts['memo_id'])->update(['content' => $posts['content']]);
             MemoTag::where('memo_id','=',$posts['memo_id'])->delete();
@@ -111,4 +115,26 @@ class HomeController extends Controller
         Memo::where('id' ,$posts['memo_id'])->update(['deleted_at' => date("Y-m-d H:i:s",time())]);
         return redirect(route('home'));
     }
+
+    public function draw(){
+        $draw = rand(1,5);
+        if ($draw == 1){
+          $result = "大吉";
+          $result_img = "daikichi.png";
+        } elseif ($draw == 2){
+          $result = "中吉";
+          $result_img = "chuukichi.png";
+        } elseif ($draw == 3){
+          $result = "小吉";
+          $result_img = "syoukichi.png";
+        } elseif ($draw == 4){
+          $result = "凶";
+          $result_img = "kyou.png";
+        } elseif ($draw == 5){
+          $result = "大凶";
+          $result_img = "daikyou.png";
+        }
+        // return view('result',['result'=>$result]);
+      }
+
 }

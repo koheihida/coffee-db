@@ -23,6 +23,10 @@
             <label for="image"></label>
             <input type="file" class="form-control-file" name="image" id="image">
         </div> -->
+        @error('tags')
+            <div class='alert alert-danger'> Tag is empty！</div>
+        @enderror
+        <h5>"Please make sure to tag"<h5>
         <button type="submit" class="btn btn-outline-secondary">保存</button>
     </form>
 </div>

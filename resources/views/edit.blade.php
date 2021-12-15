@@ -30,6 +30,11 @@
         <input type="text" class="form-control w-50 mb-5 elipsis" name="new_tag" placeholder="新しいタグ">
         <!-- <img scr="{{'/storage'.$edit_memo[0]['image']}}" class="w-100 mb-3" /> -->
     
+        
+        @error('tags')
+            <div class='alert alert-danger'> Tag is empty！</div>
+        @enderror
+        <h5>"Please make sure to tag"<h5>
         <button type="submit" class="btn btn-outline-secondary">更新</button>
     </form>
 </div>

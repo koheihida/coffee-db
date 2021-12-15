@@ -1,0 +1,29 @@
+body {
+  background-color: rgba(0,0,0,.93);
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.sp{
+  height: 100px;
+}
+.load_title {
+  text-align: center;
+  height: 40%;
+  margin-top: 150px;
+  display: inline;
+  color: aliceblue;
+}
+
+.whiskey-loader {
+  text-align: center;
+  
+}
+
+/* .load_title h7{
+  color: aliceblue;
+  text-align: center;
+} */
+
