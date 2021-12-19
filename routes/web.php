@@ -24,6 +24,11 @@ Route::get('/test', function () {
 Route::get('/load', function () {
     return view('loading');
 });
+Route::get('/flavor', function () {
+    return view('flavor');
+});
+
+
 Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('index');
 Route::get('/home', [HomeController::class, 'index'])->name('home');

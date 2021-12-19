@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-    
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     @yield('javascript')
@@ -87,58 +87,9 @@
                 </div>
             </div>
         </nav>
-    <div class="test_img">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-                <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
-                <link rel="stylesheet" href="{{ asset('css/test.css') }}">
-                <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
-                <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/css/6-3-1.css">
-                </head>
-
-                <body>
-                <!-- <header id=""> -->
-                <div class="box">   
-                        <div class="container">
-                            <h3>Let's check out the recommended coffee!!</h3>
-                            <div class="jumbotron mt-5">
-                                <div class="d-flex justify-content-center">
-                                <div id="js-question" class="alert alert-primary" role="alert">
-                                    どんな気分になるコーヒーを選びたい？？
-                                </div>
-                                </div>
-                                
-                                <div id="js-items" class="d-flex justify-content-center">
-                                <div class="m-2">
-                                    <button type="button" id="js-btn-1" class="btn btn-primary">落ち着く</button>
-                                </div>
-                                <div class="m-2">
-                                    <button type="button" id="js-btn-2" class="btn btn-primary">元気になる</button>
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <script src='/js/test.js'></script>
-                        </div>
-                </div>  
-                    <div id="video-area">
-                  <video id="video" poster="image/Coffee - test.mp4" webkit-playsinline playsinline muted autoplay loop>
-                    <!--
-                        poster：動画ファイルが利用できない環境で代替表示される画像
-                        webkit-playsinline：iOS 9までのSafari用インライン再生指定
-                        playsinline：iOS 10以降のSafari用インライン再生指定
-                        muted：音声をミュートさせる
-                        autoplay：動画を自動再生させる
-                        loop：動画をループさせる
-                        controls：コントロールバーを表示する
-                    -->
-                  <source src="image/Coffee - test.mp4" type="video/mp4">
-                  <source src="image/Coffee - test.mp4" type="video/ogv">
-                  <source src="image/Coffee - test.mp4" type="video/webm">
-                  <p>動画を再生できる環境ではありません。</p>
-                  </video>
-                    <!--/video-area--></div>
-                <!-- </header> -->
-      
+    </div>
+    <div class="wheel"> 
+      <img src="image/flavorwheel.jpg">
     </div>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>

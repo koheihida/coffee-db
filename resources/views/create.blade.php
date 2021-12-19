@@ -27,7 +27,7 @@
             <div class='alert alert-danger'> Tag is empty！</div>
         @enderror
         <h5>"Please make sure to tag"<h5>
-        <button type="submit" class="btn btn-outline-secondary">保存</button>
+        <button type="submit" class="btn btn-outline-secondary ">保存</button>
     </form>
 </div>
 @endsection
