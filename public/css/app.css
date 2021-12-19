@@ -238,7 +238,19 @@ a {
   text-decoration: none;
 }
 a:hover {
-  opacity: 0.5;
+  /* opacity: 0.5; */
+    margin-top: 3px;
+    color: white;
+    background: brown;
+    transition: 2s;
+    border-radius: 5px;
+}
+.navbar-brand button :hover {
+    margin-top: 3px;
+    color: white;
+    background: brown;
+    transition: 2s;
+    border-radius: 5px;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -4437,10 +4449,10 @@ textarea.form-control-lg {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: brown;
 }
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-  color: rgba(0, 0, 0, 0.9);
+  color: white;
 }
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 0.55);

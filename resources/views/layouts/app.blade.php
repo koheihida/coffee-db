@@ -25,25 +25,33 @@
     <link href="/css/layout.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
     <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-3-1/css/5-3-1.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+                <div>
+                    <a class="navbar-brand" href="{{ url('/') }}"><i class="fas fa-mug-hot"></i>
+                    {{ config('app.name', 'Laravel') }}</a>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div>
-                    <a class="navbar-brand" href="{{ url('/test') }}"><i class="fas fa-coffee"></i>checker</a>
+                    <a class="navbar-brand top_btn" href="image/readme.png" data-lightbox="group"><i class="fas fa-question"></i> how to use</a>
                 </div>
                 <div>
-                    <a class="navbar-brand" href="{{ url('/load') }}"><i class="fas fa-clipboard"></i>coffee memo</a>
+                    <a class="navbar-brand" href="{{ url('/test') }}"><i class="fas fa-coffee"></i> coffeechecker</a>
+                </div>
+                <div>
+                    <a class="navbar-brand" href="{{ url('/load') }}"><i class="fas fa-clipboard"></i> coffee memo</a>
                 </div> 
                 <div>
-                    <a class="navbar-brand" href="{{ url('/flavor') }}"><i class="fas fa-chart-pie"></i> flavor wheel</a>
+                    <a class="navbar-brand" href="image/flavorwheel.jpg" data-lightbox="group"><i class="fas fa-chart-pie"></i> flavor wheel</a>
                 </div> 
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -97,9 +105,13 @@
                     <div class="card">
                         <div class="card-header">タグ一覧</div>
                         <div class="card-body my-card-body">
+                            <div>
                                 <a href="/home" class="card-text d-block elipsis mb-2">Show all</a>
+                            </div>    
                             @foreach($tags as $tag)
-                                <a href="/home/?tag={{$tag['id']}}" class="card-text d-block elipsis mb-2">{{$tag['name']}}</a>
+                                <div>
+                                    <a href="/home/?tag={{$tag['id']}}" class="card-text d-block elipsis mb-2">{{$tag['name']}}</a>
+                                </div>
                             @endforeach
                         </div>
                     </div>
@@ -109,7 +121,9 @@
                         <div class="card-header d-flex justify-content-between">メモ一覧<a href="{{route('home')}}"><i class="fas fa-plus-square"></i></a></div>
                         <div class="card-body my-card-body">
                             @foreach($memos as $memo)
-                                <a href="/edit/{{$memo['id']}}" class="card-text d-block elipsis mb-2">{{$memo['content']}}</a>
+                                <div>
+                                    <a href="/edit/{{$memo['id']}}" class="card-text d-block elipsis mb-2">{{$memo['content']}}</a>
+                                </div>
                             @endforeach
                         </div>
                     </div>

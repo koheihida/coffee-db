@@ -3,6 +3,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">新規メモ</div>
+
     <form class="card-body my-card-body" action="{{ route('store')}}" method="POST">
     <!-- enctype="multipart/form-data" -->
         @csrf
@@ -27,7 +28,8 @@
             <div class='alert alert-danger'> Tag is empty！</div>
         @enderror
         <h5>"Please make sure to tag"<h5>
-        <button type="submit" class="btn btn-outline-secondary ">保存</button>
+        <!-- <a type="submit" class="navbar-brand">保存</a> -->
+        <button type="submit" class="btn btn-outline-secondary">保存</button>
     </form>
 </div>
 @endsection

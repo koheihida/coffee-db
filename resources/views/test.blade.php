@@ -22,17 +22,25 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="/css/layout.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/test.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+                <div>
+                    <a class="navbar-brand" href="{{ url('/') }}"><i class="fas fa-mug-hot"></i>
+                    {{ config('app.name', 'Laravel') }}</a>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <div>
+                    <a class="navbar-brand " href="image/readme.png" data-lightbox="group"><i class="fas fa-question"></i> how to use</a>
+                </div>
                 <div>
                     <a class="navbar-brand" href="{{ url('/test') }}"><i class="fas fa-coffee"></i> coffee checker</a>
                 </div> 
@@ -40,7 +48,7 @@
                     <a class="navbar-brand" href="{{ url('/load') }}"><i class="fas fa-clipboard"></i> coffee memo</a>
                 </div>
                 <div>
-                    <a class="navbar-brand" href="{{ url('/flavor') }}"><i class="fas fa-chart-pie"></i> flavor wheel</a>
+                    <a class="navbar-brand" href="image/flavorwheel.jpg" data-lightbox="group"><i class="fas fa-chart-pie"></i> flavor wheel</a>
                 </div> 
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
