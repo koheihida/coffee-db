@@ -42,6 +42,9 @@
                 <div>
                     <a class="navbar-brand" href="{{ url('/load') }}"><i class="fas fa-clipboard"></i>coffee memo</a>
                 </div> 
+                <div>
+                    <a class="navbar-brand" href="{{ url('/flavor') }}"><i class="fas fa-chart-pie"></i> flavor wheel</a>
+                </div> 
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
