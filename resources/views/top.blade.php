@@ -124,6 +124,9 @@
                     <a class="navbar-brand top_btn" href="{{ url('/home') }}"><i class="fas fa-clipboard"></i>coffee memo</a>
                 </div> 
                 <div>
+                    <a class="navbar-brand top_btn" href="{{ url('/flavor') }}"><i class="fas fa-chart-pie"></i> flavor wheel</a>
+                </div>
+                <div>
                   <a class="navbar-brand top_btn" href="https://twitter.com/kohei_osaka"><i class="fab fa-twitter-square"></i>kohei</a>
                 </div>
               </div>
