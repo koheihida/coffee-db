@@ -133,7 +133,7 @@
                     <a class="navbar-brand top_btn" href="{{ url('/test') }}"> <i class="fas fa-coffee"></i> coffee checker </a>
                 </div> 
                 <div>
-                    <a class="navbar-brand top_btn" href="{{ url('/home') }}"> <i class="fas fa-clipboard"></i> coffee memo </a>
+                    <a class="navbar-brand top_btn" href="{{ url('/load') }}"> <i class="fas fa-clipboard"></i> coffee memo </a>
                 </div> 
                 <div>
                     <a class="navbar-brand top_btn" href="image/flavorwheel.jpg" data-lightbox="group"><i class="fas fa-chart-pie"></i> flavor wheel</a>
