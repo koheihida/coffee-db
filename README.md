@@ -7,6 +7,9 @@ https://what-kind-of-coffee.link/
 mail：mmm@gmail
 パスワード：mmmm2222
 
+# Qiitaにまとめました
+https://qiita.com/kohei_04/items/8d54a19a308ce7d5a3de
+
 # 課題修正
 リリース後、このアプリケーションを開きたいと思うようなワクワク感がないとのコメントがあったため
 メモページに遷移前にコーヒーの豆知識をランダムに表示するローディング画面を経由し5秒後メモページに遷移する様に実装しました。

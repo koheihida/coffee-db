@@ -16,7 +16,7 @@
         @csrf
         <input type="hidden" name="memo_id" value="{{$edit_memo[0]['id']}}">
         <div class="form-floating">
-            <textarea class="form-control" placeholder="ここにメモを入力" name="content" style="height: 100px">{{ $edit_memo[0]['content'] }}</textarea>
+            <textarea class="form-control" placeholder="ここにメモを入力" name="content" style="height: 100px" >{{ $edit_memo[0]['content'] }}</textarea>
         </div>
         @error('content')
             <div class='alert alert-danger'> Content is empty！</div>
@@ -27,10 +27,10 @@
                 <label class="form-check-label" for="{{ $t['id']}}">{{ $t['name'] }}</label>
             </div>
         @endforeach
-        <input type="text" class="form-control w-50 mb-5 elipsis" name="new_tag" placeholder="新しいタグ">
+        <input type="text" class="form-control w-50 mb-5 elipsis" name="new_tag" placeholder="新しいタグ" value="{{ old('new_tag') }}">
         <!-- <img scr="{{'/storage'.$edit_memo[0]['image']}}" class="w-100 mb-3" /> -->
-    
-        
+
+
         @error('tags')
             <div class='alert alert-danger'> Tag is empty！</div>
         @enderror

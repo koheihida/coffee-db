@@ -7,9 +7,9 @@
     <form class="card-body my-card-body" action="{{ route('store')}}" method="POST">
     <!-- enctype="multipart/form-data" -->
         @csrf
-        <div class="form-floating">
-            <textarea class="form-control mb-5" name="content" style="height: 100px" placeholder="新しいメモ"></textarea>
-        </div>
+
+        <textarea class="form-control mb-5" name="content" style="height: 100px" placeholder="新しいメモ" >{{ old('content') }}</textarea>
+        
         @error('content')
             <div class='alert alert-danger'> Content is empty！</div>
         @enderror
@@ -19,7 +19,7 @@
                 <label class="form-check-label" for="{{ $t['id']}}">{{ $t['name'] }}</label>
             </div>
         @endforeach
-        <input type="text" class="form-control w-50 mb-5 elipsis" name="new_tag" placeholder="新しいタグ">
+        <input type="text" class="form-control w-50 mb-5 elipsis" name="new_tag" placeholder="新しいタグ" value="{{ old('new_tag') }}">
         <!-- <div class="form-group">
             <label for="image"></label>
             <input type="file" class="form-control-file" name="image" id="image">
