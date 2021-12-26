@@ -9,6 +9,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -3943,6 +3944,7 @@ textarea.form-control-lg {
 }
 
 .nav {
+    width: 100%;
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
@@ -4039,6 +4041,7 @@ textarea.form-control-lg {
 }
 
 .navbar {
+  width: cover;
   position: relative;
   display: flex;
   flex-wrap: wrap;

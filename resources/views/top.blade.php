@@ -26,6 +26,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/test.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/css/6-3-1.css">
 </head>
 <body>
     <div id="app">
@@ -44,15 +49,15 @@
                 </div>
                 <div>
                     <a class="navbar-brand " href="{{ url('/test') }}"><i class="fas fa-coffee"></i> coffee checker</a>
-                </div> 
+                </div>
                 <div>
                     <a class="navbar-brand" href="{{ url('/load') }}"><i class="fas fa-clipboard"></i> coffee memo</a>
-                </div> 
+                </div>
 
                 <div>
                     <a class="navbar-brand" href="image/flavorwheel.jpg" data-lightbox="group"><i class="fas fa-chart-pie"></i> flavor wheel</a>
-                </div> 
-                
+                </div>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
@@ -97,51 +102,33 @@
                 </div>
             </div>
         </nav>
-                <meta name="viewport" content="width=device-width,initial-scale=1.0">
-                <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
-                <link rel="stylesheet" href="{{ asset('css/test.css') }}">
-                <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
-                <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/css/6-3-1.css">
-                </head>
-
-                <body>
-                <header id="header">
-                  <h1>What kind of coffee??</h1>
-                    <div id="video-area">
-                  <video id="video" poster="image/Coffee - top.mp4" webkit-playsinline playsinline muted autoplay loop>
-                    <!--
-                        poster：動画ファイルが利用できない環境で代替表示される画像
-                        webkit-playsinline：iOS 9までのSafari用インライン再生指定
-                        playsinline：iOS 10以降のSafari用インライン再生指定
-                        muted：音声をミュートさせる
-                        autoplay：動画を自動再生させる
-                        loop：動画をループさせる
-                        controls：コントロールバーを表示する
-                    -->
-                  <source src="image/Coffee - top.mp4" type="video/mp4">
-                  <source src="image/Coffee - top.mp4" type="video/ogv">
-                  <source src="image/Coffee - top.mp4" type="video/webm">
-                  <p>動画を再生できる環境ではありません。</p>
-                  </video>
-                    <!--/video-area--></div>
-                </header>
-                <div id="container">
-                <div>
-                    <a class="navbar-brand top_btn" href="image/readme.png" data-lightbox="group"><i class="fas fa-question"></i> how to use</a>
-                </div>
-                <div>
-                    <a class="navbar-brand top_btn" href="{{ url('/test') }}"> <i class="fas fa-coffee"></i> coffee checker </a>
-                </div> 
-                <div>
-                    <a class="navbar-brand top_btn" href="{{ url('/load') }}"> <i class="fas fa-clipboard"></i> coffee memo </a>
-                </div> 
-                <div>
-                    <a class="navbar-brand top_btn" href="image/flavorwheel.jpg" data-lightbox="group"><i class="fas fa-chart-pie"></i> flavor wheel</a>
-                </div> 
-                <div>
-                  <a class="navbar-brand top_btn" href="https://twitter.com/kohei_osaka"><i class="fab fa-twitter-square"></i> kohei</a>
-                </div>
-              </div>
+    </div>
+    <header id="header">
+        <h1>What kind of coffee??</h1>
+        <div id="video-area">
+            <video id="video" poster="image/Coffee - top.mp4" webkit-playsinline playsinline muted autoplay loop>
+                <source src="image/Coffee - top.mp4" type="video/mp4">
+                <p>動画を再生できる環境ではありません。</p>
+            </video>
+        </div>
+    </header>
+    <div id="container">
+        <div>
+            <a class="navbar-brand top_btn" href="image/readme.png" data-lightbox="group"><i class="fas fa-question"></i> how to use</a>
+        </div>
+        <div>
+            <a class="navbar-brand top_btn" href="{{ url('/test') }}"> <i class="fas fa-coffee"></i> coffee checker </a>
+        </div>
+        <div>
+            <a class="navbar-brand top_btn" href="{{ url('/load') }}"> <i class="fas fa-clipboard"></i> coffee memo </a>
+        </div>
+        <div>
+            <a class="navbar-brand top_btn" href="image/flavorwheel.jpg" data-lightbox="group"><i class="fas fa-chart-pie"></i> flavor wheel</a>
+        </div>
+        <div>
+            <a class="navbar-brand top_btn" href="https://twitter.com/kohei_osaka"><i class="fab fa-twitter-square"></i> kohei</a>
+        </div>
+    </div>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

@@ -32,6 +32,7 @@
 </head>
 <body>
     <div id="app">
+    <header>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <div>
@@ -49,10 +50,10 @@
                 </div>
                 <div>
                     <a class="navbar-brand" href="{{ url('/load') }}"><i class="fas fa-clipboard"></i> coffee memo</a>
-                </div> 
+                </div>
                 <div>
                     <a class="navbar-brand" href="image/flavorwheel.jpg" data-lightbox="group"><i class="fas fa-chart-pie"></i> flavor wheel</a>
-                </div> 
+                </div>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -66,27 +67,35 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <div>
+                                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    </div>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <div>
+                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    </div>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+                                <div>
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }}
+                                    </a>
+                                </div>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                                    <div>
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+                                    </div>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
@@ -98,7 +107,7 @@
                 </div>
             </div>
         </nav>
-
+    </header>
         <main class="">
             <div class="row">
                 <div class="col-md-2 p-0">
@@ -107,7 +116,7 @@
                         <div class="card-body my-card-body">
                             <div>
                                 <a href="/home" class="card-text d-block elipsis mb-2">Show all</a>
-                            </div>    
+                            </div>
                             @foreach($tags as $tag)
                                 <div>
                                     <a href="/home/?tag={{$tag['id']}}" class="card-text d-block elipsis mb-2">{{$tag['name']}}</a>
@@ -118,7 +127,11 @@
                 </div>
                 <div class="col-md-4 p-0">
                     <div class="card">
-                        <div class="card-header d-flex justify-content-between">メモ一覧<a href="{{route('home')}}"><i class="fas fa-plus-square"></i></a></div>
+                        <div class="card-header d-flex justify-content-between">メモ一覧
+                            <div>
+                                <a href="{{route('home')}}"><i class="fas fa-plus-square"></i></a>
+                            </div>
+                        </div>
                         <div class="card-body my-card-body">
                             @foreach($memos as $memo)
                                 <div>

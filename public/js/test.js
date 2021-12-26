@@ -35,10 +35,10 @@ let score = 0;
 
 const init = () => {
   $question.textContent = quiz[quizCount].question;
-  
+
   const buttonLen = $buttons.length;
   let btnIndex = 0;
-  
+
   while(btnIndex < buttonLen){
     $buttons[btnIndex].textContent = quiz[quizCount].answers[btnIndex];
     btnIndex++;
@@ -50,7 +50,7 @@ const goToNext = () => {
   if(quizCount < quizLen){
     init(quizCount);
   } else {
-    
+
     window.location.href = '/load';
   }
 };
@@ -163,23 +163,3 @@ while(answersIndex < answersLen){
   });
   answersIndex++;
 }
-
-function popupImage() {
-  var popup = document.getElementById('js-popup');
-  if(!popup) return;
-
-  var blackBg = document.getElementById('js-black-bg');
-  var closeBtn = document.getElementById('js-close-btn');
-  var showBtn = document.getElementById('js-show-popup');
-
-  closePopUp(blackBg);
-  closePopUp(closeBtn);
-  closePopUp(showBtn);
-  function closePopUp(elem) {
-    if(!elem) return;
-    elem.addEventListener('click', function() {
-      popup.classList.toggle('is-show');
-    });
-  }
-}
-popupImage();

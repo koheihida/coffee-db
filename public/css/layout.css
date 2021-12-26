@@ -1,3 +1,7 @@
+header > nav{
+    width: 1455px;
+}
+
 .my-card-body{
   height: calc(100vh - (55.05px + 40.05px));
 }
@@ -21,4 +25,8 @@
 }
 h5{
   color:brown;
+}
+
+.row > a {
+    direction: none;
 }
