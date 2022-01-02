@@ -1,14 +1,15 @@
 # タイトル
 what-kind-of-coffee??
 
+# 環境
+PHP 7.3.29
+Laravel 8.74.0
+
 # URL
 https://what-kind-of-coffee.link/
 テスト用アカウント
 mail：mmm@gmail
 パスワード：mmmm2222
-
-# Qiitaにまとめました
-https://qiita.com/kohei_04/items/8d54a19a308ce7d5a3de
 
 # 課題修正
 リリース後、このアプリケーションを開きたいと思うようなワクワク感がないとのコメントがあったため
@@ -112,3 +113,5 @@ JavaScriptを使用して最終診断後にメモページに遷移するよう�
 | memo_id   | unsignedBigInteger|foreign   |
 | tag_id    | unsignedBigInteger| foreign |
 
+# Qiitaにまとめました
+https://qiita.com/kohei_04/items/8d54a19a308ce7d5a3de
