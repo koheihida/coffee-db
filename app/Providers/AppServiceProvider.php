@@ -28,14 +28,17 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
-        view()->composer('*', function ($view){
+        view()->composer('*', function ($view)
+        {
             $memo_model = new Memo();
             $memos = $memo_model -> getMyMemo();
             $tags = Tag::where('user_id','=',\Auth::id())
                 ->whereNull('deleted_at')
                 ->orderBy('id','DESC')
-                ->get();  
-            $view->with('memos',$memos)->with('tags',$tags);
+                ->get();
+                
+            $view->with('memos',$memos)
+            ->with('tags',$tags);
         });
     }
 }
