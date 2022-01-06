@@ -24,10 +24,6 @@ Route::get('/test', function () {
 Route::get('/load', function () {
     return view('loading');
 });
-Route::get('/flavor', function () {
-    return view('flavor');
-});
-
 
 Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('index');
@@ -36,3 +32,5 @@ Route::post('/store', [HomeController::class, 'store'])->name('store');
 Route::get('/edit/{id}', [HomeController::class, 'edit'])->name('edit');
 Route::post('/update', [HomeController::class, 'update'])->name('update');
 Route::post('/destroy', [HomeController::class, 'destroy'])->name('destroy');
+Route::get('/find', [HomeController::class, 'find'])->name('find');
+Route::get('/search', [HomeController::class, 'search'])->name('search');

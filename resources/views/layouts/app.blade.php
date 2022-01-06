@@ -119,7 +119,7 @@
                             </div>
                             @foreach($tags as $tag)
                                 <div>
-                                    <a href="/home/?tag={{$tag['id']}}" class="card-text d-block elipsis mb-2">{{$tag['name']}}</a>
+                                    <a href="/home/?tag={{ $tag['id'] }}" class="card-text d-block elipsis mb-2">{{ $tag['name'] }}</a>
                                 </div>
                             @endforeach
                         </div>
@@ -129,13 +129,14 @@
                     <div class="card">
                         <div class="card-header d-flex justify-content-between">メモ一覧
                             <div>
-                                <a href="{{route('home')}}"><i class="fas fa-plus-square"></i></a>
+                                <a href="{{ route('search') }}"><i class="fas fa-search"></i></a>
+                                <a href="{{ route('home') }}"><i class="fas fa-plus-square"></i></a>
                             </div>
                         </div>
                         <div class="card-body my-card-body">
                             @foreach($memos as $memo)
                                 <div>
-                                    <a href="/edit/{{$memo['id']}}" class="card-text d-block elipsis mb-2">{{$memo['content']}}</a>
+                                    <a href="/edit/{{ $memo['id'] }}" class="card-text d-block elipsis mb-2">{{ $memo['content'] }}</a>
                                 </div>
                             @endforeach
                         </div>
