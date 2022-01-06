@@ -143,6 +143,7 @@ class HomeController extends Controller
     {
         $searches = Memo::where('user_id', '=', \Auth::id())
         -> where('content', 'like', "%$request->keyword%")
+        ->whereNull('memos.deleted_at')
         ->simplePaginate(13);
 
         return view('search', compact('searches'));
