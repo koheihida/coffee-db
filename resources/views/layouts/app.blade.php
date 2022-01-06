@@ -54,7 +54,9 @@
                 <div>
                     <a class="navbar-brand" href="image/flavorwheel.jpg" data-lightbox="group"><i class="fas fa-chart-pie"></i> flavor wheel</a>
                 </div>
-                
+                <div>
+                    <a class="navbar-brand" href="{{ url('/load') }}" data-lightbox="group"><i class="fas fa-comments"></i> open space</a>
+                </div>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
