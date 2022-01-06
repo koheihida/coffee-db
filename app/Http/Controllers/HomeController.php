@@ -143,7 +143,7 @@ class HomeController extends Controller
     {
 
 
-        $searches = Memo::where('content',$request->keyword)->simplePaginate(13);
+        $searches = Memo::where('content','like', "%$request->keyword%")->simplePaginate(13);
         // dd($searches);
         return view('search', compact('searches'));
         // $keyword = $request->all();
