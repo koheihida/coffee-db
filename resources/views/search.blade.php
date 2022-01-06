@@ -12,7 +12,7 @@
         <div class="">
             @foreach($searches as $search)
                 <div>
-                    <a href="/edit/{{$search['id']}}" class="card-text d-block elipsis mb-2">{{$search['content']}}</a>
+                    <a href="/edit/{{ $search['id'] }}" class="card-text d-block elipsis mb-2">{{ $search['content'] }}</a>
                 </div>
             @endforeach
         </div>
