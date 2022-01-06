@@ -111,7 +111,12 @@
             </div>
         </nav>
     </header>
-
-    
+    <div class="card-body my-card-body">
+        @foreach($memos as $memo)
+            <div>
+                <a href="/edit/{{ $memo['id'] }}" class="card-text d-block elipsis mb-2">{{ $memo['content'] }}</a>
+            </div>
+        @endforeach
+    </div>
 </body>
 </html>

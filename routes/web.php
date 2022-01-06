@@ -34,3 +34,4 @@ Route::post('/update', [HomeController::class, 'update'])->name('update');
 Route::post('/destroy', [HomeController::class, 'destroy'])->name('destroy');
 Route::get('/find', [HomeController::class, 'find'])->name('find');
 Route::get('/search', [HomeController::class, 'search'])->name('search');
+Route::get('/open', [HomeController::class, 'open'])->name('open');
