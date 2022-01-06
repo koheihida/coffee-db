@@ -141,21 +141,8 @@ class HomeController extends Controller
 
     public function search(Request $request)
     {
-
-
         $searches = Memo::where('content','like', "%$request->keyword%")->simplePaginate(13);
-        // dd($searches);
-        return view('search', compact('searches'));
-        // $keyword = $request->all();
-        // $query = Memo::all();
-        // if ($request->has('content') && $keyword != null)
-        // {
-        //     $searches =$query->where('content', 'LIKE', "%{ $keyword }%")
-        //     ->get();
-        //     dd($query);
-        // }
-        // // $searches = $query->simplePaginate(13);
-        // return view('search', compact('searches'));
 
+        return view('search', compact('searches'));
     }
 }
