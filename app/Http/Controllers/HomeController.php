@@ -107,7 +107,8 @@ class HomeController extends Controller
         $request->validate(['tags'=> 'required']);
         DB::transaction(function () use($posts)
         {
-            Memo::where('id', $posts['memo_id'])->update(['content' => $posts['content']]);
+            Memo::where('id', $posts['memo_id'])
+            ->update(['content' => $posts['content']]);
             MemoTag::where('memo_id', '=', $posts['memo_id'])
             ->delete();
 
