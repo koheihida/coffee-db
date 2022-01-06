@@ -54,7 +54,9 @@
                 <div>
                     <a class="navbar-brand" href="image/flavorwheel.jpg" data-lightbox="group"><i class="fas fa-chart-pie"></i> flavor wheel</a>
                 </div>
-                
+                <div>
+                    <a class="navbar-brand" href="{{ url('/load') }}" data-lightbox="group"><i class="fas fa-comments"></i> open space</a>
+                </div>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -109,45 +111,7 @@
             </div>
         </nav>
     </header>
-        <main class="">
-            <div class="row">
-                <div class="col-md-2 p-0">
-                    <div class="card">
-                        <div class="card-header">タグ一覧</div>
-                        <div class="card-body my-card-body">
-                            <div>
-                                <a href="/home" class="card-text d-block elipsis mb-2">Show all</a>
-                            </div>
-                            @foreach($tags as $tag)
-                                <div>
-                                    <a href="/home/?tag={{ $tag['id'] }}" class="card-text d-block elipsis mb-2">{{ $tag['name'] }}</a>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 p-0">
-                    <div class="card">
-                        <div class="card-header d-flex justify-content-between">メモ一覧
-                            <div>
-                                <a href="{{ route('search') }}"><i class="fas fa-search"></i></a>
-                                <a href="{{ route('home') }}"><i class="fas fa-plus-square"></i></a>
-                            </div>
-                        </div>
-                        <div class="card-body my-card-body">
-                            @foreach($memos as $memo)
-                                <div>
-                                    <a href="/edit/{{ $memo['id'] }}" class="card-text d-block elipsis mb-2">{{ $memo['content'] }}</a>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 p-0">
-                    @yield('content')
-                </div>
-            </div>
-        </main>
-    </div>
+
+    
 </body>
 </html>
