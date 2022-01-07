@@ -25,10 +25,11 @@
     <link href="/css/layout.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
     <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-3-1/css/5-3-1.css">
+    <link rel="stylesheet" type="text/css" href="css/5-1-11.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+</head>
 </head>
 <body>
     <div id="app">
@@ -42,21 +43,20 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div>
-                    <a class="navbar-brand top_btn" href="image/readme.png" data-lightbox="group"><i class="fas fa-question"></i> how to use</a>
-                </div>
-                <div>
-                    <a class="navbar-brand" href="{{ url('/test') }}"><i class="fas fa-coffee"></i> checker</a>
-                </div>
-                <div>
-                    <a class="navbar-brand" href="{{ url('/load') }}"><i class="fas fa-clipboard"></i>  memo</a>
-                </div>
-                <div>
-                    <a class="navbar-brand" href="image/flavorwheel.jpg" data-lightbox="group"><i class="fas fa-chart-pie"></i> flavor wheel</a>
-                </div>
-                <div>
-                    <a class="navbar-brand" href="{{ url('/load') }}" data-lightbox="group"><i class="fas fa-comments"></i> open space</a>
-                </div>
+
+                <div class="openbtn"><span></span><span></span><span></span></div>
+                    <nav id="g-nav">
+                        <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+                            <ul>
+                            <li><a class="navbar-brand top_btn" href="image/readme.png" data-lightbox="group"><i class="fas fa-question"></i> how to use</a></li>
+                            <li><a class="navbar-brand" href="{{ url('/test') }}"><i class="fas fa-coffee"></i> checker</a></li>
+                            <li><a class="navbar-brand" href="{{ url('/load') }}"><i class="fas fa-clipboard"></i>  memo</a></li>
+                            <li><a class="navbar-brand" href="image/flavorwheel.jpg" data-lightbox="group"><i class="fas fa-chart-pie"></i> flavor wheel</a></li>
+                            <li><a class="navbar-brand" href="{{ url('/open') }}" data-lightbox="group"><i class="fas fa-comments"></i> open space</a></li>
+                            <li></li>
+                            </ul>
+                        </div>
+                    </nav>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -110,10 +110,11 @@
                 </div>
             </div>
         </nav>
+
     </header>
         <main class="">
             <div class="row">
-                <div class="col-md-2 p-0">
+                <div class="col-sm-12 col-md-2 p-0">
                     <div class="card">
                         <div class="card-header">タグ一覧</div>
                         <div class="card-body my-card-body">
@@ -128,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 p-0">
+                <div class="col-sm-12 col-md-4 p-0">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between">メモ一覧
                             <div>
@@ -145,11 +146,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 p-0">
+                <div class="col-sm-12 col-md-6 p-0">
                     @yield('content')
                 </div>
             </div>
         </main>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src='/js/menu.js'></script>
 </body>
 </html>
