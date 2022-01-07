@@ -5,7 +5,7 @@
 @section('content')
 <div class="card">
     <div class="edit_color">
-        <div class="card-header d-flex justify-content-between">
+        <div class="card-header d-flex justify-content-between ellipsis">
             <div>
                 編集<i class="fas fa-pencil-alt"></i>
             </div>

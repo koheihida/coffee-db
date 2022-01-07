@@ -33,14 +33,21 @@
 </head>
 <body>
     <div id="app">
-    <header>
-        <div class="row">
-            <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container">
+                <div>
+                    <a class="navbar-brand" href="{{ url('/') }}"><i class="fas fa-mug-hot"></i>
+                    {{ config('app.name', 'Laravel') }}</a>
+                </div>
+                <button class="navbar-toggler top_btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
                 <div class="openbtn"><span></span><span></span><span></span></div>
                     <nav id="g-nav">
-                        <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+                        <div id="g-nav-list">
                             <ul>
-                            <li><a class="navbar-brand top_btn" href="image/readme.png" data-lightbox="group"><i class="fas fa-question"></i> how to use</a></li>
+                            <li><a class="navbar-brand" href="image/readme.png" data-lightbox="group"><i class="fas fa-question"></i> how to use</a></li>
                             <li></li>
                             <li><a class="navbar-brand" href="{{ url('/test') }}"><i class="fas fa-coffee"></i> checker</a></li>
                             <li><a class="navbar-brand" href="{{ url('/load') }}"><i class="fas fa-clipboard"></i>  memo</a></li>
@@ -50,78 +57,62 @@
                             </ul>
                         </div>
                     </nav>
-                <div class="container">
-                    <div>
-                        <a class="navbar-brand" href="{{ url('/') }}"><i class="fas fa-mug-hot"></i>
-                        {{ config('app.name', 'Laravel') }}</a>
-                    </div>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    <div class="auth">
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <!-- Left Side Of Navbar -->
-                            <ul class="navbar-nav me-auto">
+                <div class="auth">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav me-auto">
 
-                            </ul>
+                        </ul>
 
-                            <!-- Right Side Of Navbar -->
-                            <ul class="navbar-nav ms-auto">
-                                <!-- Authentication Links -->
-                                @guest
-                                    @if (Route::has('login'))
-                                        <li class="nav-item">
-                                            <div>
-                                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                            </div>
-                                        </li>
-                                    @endif
-
-                                    @if (Route::has('register'))
-                                        <li class="nav-item">
-                                            <div>
-                                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                            </div>
-                                        </li>
-                                    @endif
-                                @else
-                                    <li class="nav-item dropdown">
-                                        <div>
-                                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                                {{ Auth::user()->name }}
-                                            </a>
-                                        </div>
-
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                            <div>
-                                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                                onclick="event.preventDefault();
-                                                                document.getElementById('logout-form').submit();">
-                                                    {{ __('Logout') }}
-                                                </a>
-                                            </div>
-
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                @csrf
-                                            </form>
-                                        </div>
+                        <!-- Right Side Of Navbar -->
+                        <ul class="navbar-nav ms-auto">
+                            <!-- Authentication Links -->
+                            @guest
+                                @if (Route::has('login'))
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                     </li>
-                                @endguest
-                            </ul>
-                        </div>
+                                @endif
+
+                                @if (Route::has('register'))
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    </li>
+                                @endif
+                            @else
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }}
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            @endguest
+                        </ul>
                     </div>
                 </div>
-            </nav>
-        </div>
-        </header>
+            </div>
+        </nav>
+    </div>
+
             <main class="">
                 <div class="row">
                     <div class="col-sm-12 col-md-2 p-0">
                         <div class="card">
                             <div class="card-header">タグ一覧</div>
-                            <div class="card-body my-card-body">
+                            <div class="card-body my-card-body ellipsis">
                                 <div>
-                                    <a href="/home" class="card-text d-block elipsis mb-2">Show all</a>
+                                    <a href="/home" class="card-text d-block ellipsis mb-2">Show all</a>
                                 </div>
                                 @foreach($tags as $tag)
                                     <div>
@@ -133,13 +124,13 @@
                     </div>
                     <div class="col-sm-12 col-md-4 p-0 ">
                         <div class="card">
-                            <div class="card-header d-flex justify-content-between">メモ一覧
+                            <div class="card-header d-flex justify-content-between ellipsis">メモ一覧
                                 <div>
                                     <a href="{{ route('search') }}" class="cearch-icon"><i class="fas fa-search"></i></a>
                                     <a href="{{ route('home') }}" class="cearch-icon"><i class="fas fa-plus-square"></i></a>
                                 </div>
                             </div>
-                            <div class="card-body my-card-body">
+                            <div class="card-body my-card-body ellipsis">
                                 @foreach($memos as $memo)
                                     <div>
                                         <a href="/edit/{{ $memo['id'] }}" class="card-text d-block elipsis mb-2">{{ $memo['content'] }}</a>

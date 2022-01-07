@@ -19,7 +19,13 @@ body {
 
 .whiskey-loader {
   text-align: center;
-  
+
+}
+
+.ellipsis{
+    overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 /* .load_title h7{
