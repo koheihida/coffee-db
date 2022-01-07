@@ -149,9 +149,15 @@ class HomeController extends Controller
         return view('search', compact('searches'));
     }
 
-    public function open()
+    public function open(Request $request)
     {
-        $memos = Memo::all();
-        return view('open');
+        $memos = Memo::where('content',$request->keyword)->simplePaginate(13);
+        return view('open',  compact('memos'));
+        dd($memos);
+        // $memos = Memo::all('user_id')
+        // ->where('content');
+        // // dd($memos);
+
+        // return view('open', compact('memos'));
     }
 }
