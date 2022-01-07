@@ -131,11 +131,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-4 p-0">
+                    <div class="col-sm-12 col-md-4 p-0 ">
                         <div class="card">
                             <div class="card-header d-flex justify-content-between">メモ一覧
                                 <div>
-                                    <a href="{{ route('search') }}"><i class="fas fa-search"></i></a>
+                                    <a href="{{ route('search') }}" class="cearch-icon"><i class="fas fa-search"></i></a>
                                     <a href="{{ route('home') }}"><i class="fas fa-plus-square"></i></a>
                                 </div>
                             </div>
@@ -148,7 +148,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 p-0">
+                    <div class=" col-md-6 p-0 main-blade">
                         @yield('content')
                     </div>
                 </div>
