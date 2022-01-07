@@ -16,13 +16,13 @@ use App\Http\Controllers\HomeController;
 
 
 Route::get('/', function () {
-    return view('top');
+    return view('other.top');
 });
 Route::get('/test', function () {
-    return view('test');
+    return view('other.test');
 });
 Route::get('/load', function () {
-    return view('loading');
+    return view('other.loading');
 });
 
 Auth::routes();
