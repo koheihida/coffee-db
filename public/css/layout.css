@@ -32,6 +32,10 @@ h5{
     direction: none;
 }
 
+.top-page a{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
 
 /* ハンバーガーメニュー */
 #g-nav{
