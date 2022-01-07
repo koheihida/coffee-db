@@ -79,16 +79,22 @@ h5{
 #g-nav li{
 	list-style: none;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 #g-nav li a{
-	color: maroon;
+	color: brown;
 	text-decoration: none;
 	padding:10px;
-	display: block;
+	/* display: block; */
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	font-weight: bold;
+}
+
+#g-nav li a:hover{
+    color: white;
+
 }
 
 /*========= ボタンのためのCSS ===============*/
@@ -152,5 +158,10 @@ h5{
         width: auto;
         max-height: 50vh;
         max-width: 100vh;
+    }
+
+    .auth{
+        position: relative;
+        margin-left: 50px;
     }
 }
