@@ -79,7 +79,7 @@ JavaScriptを使用して最終診断後にメモページに遷移するよう�
 コミュニティ内で使用すれば共通言語を作れる
 
 # テーブル
-[![Image from Gyazo](https://i.gyazo.com/78bff1b81134c8ee371b60837503b509.jpg)](https://gyazo.com/78bff1b81134c8ee371b60837503b509)
+[![Image from Gyazo](https://i.gyazo.com/213174bc771f4bc47faea4c972033816.jpg)](https://gyazo.com/213174bc771f4bc47faea4c972033816)
 
 # users
 | column     | type |  |
@@ -112,6 +112,16 @@ JavaScriptを使用して最終診断後にメモページに遷移するよう�
 |:-----------|------------:|:------------:|
 | memo_id   | unsignedBigInteger|foreign   |
 | tag_id    | unsignedBigInteger| foreign |
+
+# comments
+| column  | type  |  |
+|:-----------|------------:|:------------:|
+| id       |         |          |
+| comment     | longText    |        |
+|  updated_at| timestamp   |         |
+| created_at   | timestamp |        |
+|  user_id   |  foreign     |          |
+|  memo_id   |  foreign     |          |
 
 # Qiitaにまとめました
 https://qiita.com/kohei_04/items/8d54a19a308ce7d5a3de
