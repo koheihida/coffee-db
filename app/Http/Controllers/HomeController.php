@@ -37,7 +37,7 @@ class HomeController extends Controller
         ->orderBy('id','DESC')
         ->get();
 
-        return view('create',compact('tags'));
+        return view('memos.create',compact('tags'));
     }
 
     public function store(Request $request)
@@ -71,7 +71,7 @@ class HomeController extends Controller
                 }
             }
         });
-        return redirect(route('home'));
+        return redirect(route('memos.home'));
     }
 
     public function edit($id)
@@ -97,7 +97,7 @@ class HomeController extends Controller
         ->orderBy('id','DESC')
         ->get();
 
-        return view('edit',compact('edit_memo','include_tags','tags'));
+        return view('memos.edit',compact('edit_memo','include_tags','tags'));
     }
 
     public function update(Request $request)
@@ -128,7 +128,7 @@ class HomeController extends Controller
         });
         Memo::where('id', $posts['memo_id'])
         ->update(['content' => $posts['content'], 'user_id' => \Auth::id()]);
-        return redirect(route('home'));
+        return redirect(route('memos.home'));
     }
 
     public function destroy(Request $request)
@@ -136,7 +136,7 @@ class HomeController extends Controller
         $posts =$request->all();
         Memo::where('id', $posts['memo_id'])
         ->update(['deleted_at' => date("Y-m-d H:i:s", time())]);
-        return redirect(route('home'));
+        return redirect(route('memos.home'));
     }
 
     public function search(Request $request)
@@ -146,7 +146,7 @@ class HomeController extends Controller
         ->whereNull('memos.deleted_at')
         ->simplePaginate(13);
 
-        return view('search', compact('searches'));
+        return view('memos.search', compact('searches'));
     }
 
     public function open(Request $request)
