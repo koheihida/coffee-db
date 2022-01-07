@@ -11,6 +11,7 @@
                     <button type="submit" class="btn btn-outline-secondary">検索</button>
                 </form>
             </div>
+        @if($searches->count())
             <div class="">
                 @foreach($searches as $search)
                     <div>
@@ -19,6 +20,9 @@
                 @endforeach
             </div>
             {{ $searches->links() }}
+        @else
+        <p>検索結果が見つかりませんでした。</p>
+        @endif
     </div>
 </div>
 @endsection
