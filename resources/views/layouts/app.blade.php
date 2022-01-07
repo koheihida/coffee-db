@@ -34,6 +34,7 @@
 <body>
     <div id="app">
     <header>
+        <div class="row">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <div>
@@ -110,7 +111,7 @@
                 </div>
             </div>
         </nav>
-
+    </div>
     </header>
         <main class="">
             <div class="row">
