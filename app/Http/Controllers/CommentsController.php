@@ -23,4 +23,10 @@ class CommentsController extends Controller
         return view('open', compact('memos'));
     }
 
+    public function show(Request $request, $id)
+    {
+        $memo = Memo::findOrFail($id);
+
+        return view('open', compact('memo'));
+    }
 }
