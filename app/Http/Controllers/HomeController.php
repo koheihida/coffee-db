@@ -42,7 +42,7 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
-        $posts =$request->all();
+        $posts = $request->all();
         //    memo
         // $image = $request->file('image');
         // if($request->hasFile('image')){
@@ -55,7 +55,7 @@ class HomeController extends Controller
         $request->validate(['tags' => 'required']);
         DB::transaction(function() use($posts)
         {
-            $memo_id=Memo::insertGetId(['content'=>$posts['content'], 'user_id' =>\Auth::id() ]);
+            $memo_id = Memo::insertGetId(['content'=>$posts['content'], 'user_id' =>\Auth::id() ]);
             // 'image'=>$posts['image']
             $tag_exists = Tag::where('user_id', '=', \Auth::id())
             ->where('name', '=', $posts['new_tag'])
@@ -102,7 +102,7 @@ class HomeController extends Controller
 
     public function update(Request $request)
     {
-        $posts =$request->all();
+        $posts = $request->all();
         $request->validate(['content'=> 'required']);
         $request->validate(['tags'=> 'required']);
         DB::transaction(function () use($posts)
@@ -133,7 +133,7 @@ class HomeController extends Controller
 
     public function destroy(Request $request)
     {
-        $posts =$request->all();
+        $posts = $request->all();
         Memo::where('id', $posts['memo_id'])
         ->update(['deleted_at' => date("Y-m-d H:i:s", time())]);
         return redirect(route('memos.home'));

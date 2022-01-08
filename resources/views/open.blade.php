@@ -107,7 +107,7 @@
 
             <main class="">
                 <div class="row">
-                    <div class="col-sm-12 col-md-6 p-0 ">
+                    <div class="col-sm-12 col-md-3 p-0 ">
                         <div class="card">
                             <div class="card-header d-flex justify-content-between ellipsis">メモ一覧
                                 <div>
@@ -121,6 +121,16 @@
                                         <a href="/edit/{{ $memo['id'] }}" class="card-text d-block elipsis mb-2">{{ $memo['content'] }}</a>
                                     </div>
                                 @endforeach
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 p-0 ">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between ellipsis">メモ一覧
+
+                            </div>
+                            <div class="card-body my-card-body ellipsis">
+
                             </div>
                         </div>
                     </div>
