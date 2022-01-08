@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CommentsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +35,6 @@ Route::post('/update', [HomeController::class, 'update'])->name('update');
 Route::post('/destroy', [HomeController::class, 'destroy'])->name('destroy');
 Route::get('/find', [HomeController::class, 'find'])->name('find');
 Route::get('/search', [HomeController::class, 'search'])->name('search');
-Route::get('/open', [HomeController::class, 'open'])->name('open');
+
+Route::get('/open', [CommentsController::class, 'index'])->name('index');
+
