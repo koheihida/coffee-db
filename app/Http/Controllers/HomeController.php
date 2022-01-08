@@ -71,7 +71,7 @@ class HomeController extends Controller
                 }
             }
         });
-        return redirect(route('memos.home'));
+        return redirect(route('home'));
     }
 
     public function edit($id)
