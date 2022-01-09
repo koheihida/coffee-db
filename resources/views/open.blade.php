@@ -128,7 +128,9 @@
                             <div class="card-header d-flex justify-content-between ellipsis">選択したメモ
                             </div>
                             <div class="card-body my-card-body ellipsis">
+                                @isset($memo_show)
                                 {{ $memo_show }}
+                                @endisset
                                 <div>
                                     <form class="card-body my-card-body" action="{{ route('store') }}" method="POST">
                                         <div>
