@@ -141,7 +141,7 @@
                         </div>
                     </div>
                     <div class=" col-md-6 p-0 main-blade">
-                        @yield('content')
+                        @yield('comment')
                     </div>
                 </div>
             </main>
