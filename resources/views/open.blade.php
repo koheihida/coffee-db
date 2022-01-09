@@ -128,6 +128,9 @@
                         <div class="card">
                             <div class="card-header d-flex justify-content-between ellipsis">選択したメモ
                             </div>
+                            <div>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
                             <div class="card-body my-card-body ellipsis">
                                 {{ $memo_show }}
                             </div>
