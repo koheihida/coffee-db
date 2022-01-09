@@ -27,7 +27,7 @@ class CommentsController extends Controller
 
     public function show($id)
     {
-        $memo_show = Memo::select('id','content')
+        $memo_show = Memo::select('id', 'content')
             ->where('memos.id','=',$id)
             ->whereNull('memos.deleted_at')
             ->get();

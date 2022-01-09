@@ -104,7 +104,6 @@
             </div>
         </nav>
     </div>
-
             <main class="">
                 <div class="row">
                     <div class="col-sm-12 col-md-3 p-0 ">
@@ -128,11 +127,16 @@
                         <div class="card">
                             <div class="card-header d-flex justify-content-between ellipsis">選択したメモ
                             </div>
-                            <div>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                            </div>
                             <div class="card-body my-card-body ellipsis">
                                 {{ $memo_show }}
+                                <div>
+                                    <form class="card-body my-card-body" action="{{ route('store') }}" method="POST">
+                                        <div>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-outline-secondary">保存</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
