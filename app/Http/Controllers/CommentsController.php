@@ -9,24 +9,29 @@ use DB;
 
 class CommentsController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
-    public function index(Request $request)
+
+    public function index()
     {
-        // $memos = Memo::all();
-        $memos = Memo::where('content',$request->keyword)->simplePaginate(13);
+        $memos = Memo::all();
+        // $memos = Memo::where('content',$request->keyword)->simplePaginate(13);
         // $memos = Memo::orderBy('created_at', 'desc')->get();
+
+        // $memo_show = Memo::select('memos.*')
+        //     ->where('memos.id','=',$id)
+        //     ->whereNull('memos.deleted_at')
+        //     ->get();
 
         return view('open', compact('memos'));
     }
 
-    public function show(Request $request, $id)
+    public function show($id)
     {
-        $memo = Memo::findOrFail($id);
+        $memo_show = Memo::select('id','content')
+            ->where('memos.id','=',$id)
+            ->whereNull('memos.deleted_at')
+            ->get();
 
-        return view('open', compact('memo'));
+        return view('open', compact('memo_show'));
     }
 }

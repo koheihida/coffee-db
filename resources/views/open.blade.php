@@ -118,7 +118,7 @@
                             <div class="card-body my-card-body ellipsis">
                                 @foreach($memos as $memo)
                                     <div>
-                                        <a href="/edit/{{ $memo['id'] }}" class="card-text d-block elipsis mb-2">{{ $memo['content'] }}</a>
+                                        <a href="/open/{{ $memo['id'] }}" class="card-text d-block elipsis mb-2">{{ $memo['content'] }}</a>
                                     </div>
                                 @endforeach
                             </div>
@@ -126,11 +126,10 @@
                     </div>
                     <div class="col-sm-12 col-md-3 p-0 ">
                         <div class="card">
-                            <div class="card-header d-flex justify-content-between ellipsis">メモ一覧
-
+                            <div class="card-header d-flex justify-content-between ellipsis">選択したメモ
                             </div>
                             <div class="card-body my-card-body ellipsis">
-
+                                {{ $memo_show }}
                             </div>
                         </div>
                     </div>
