@@ -53,7 +53,7 @@
                             <li><a class="navbar-brand" href="{{ url('/test') }}"><i class="fas fa-coffee"></i> checker</a></li>
                             <li><a class="navbar-brand" href="{{ url('/load') }}"><i class="fas fa-clipboard"></i>  memo</a></li>
                             <li><a class="navbar-brand" href="image/flavorwheel.jpg" data-lightbox="group"><i class="fas fa-chart-pie"></i> flavor wheel</a></li>
-                            <li><a class="navbar-brand" href="{{ url('/open') }}" data-lightbox="group"><i class="fas fa-comments"></i> open space</a></li>
+                            <li><a class="navbar-brand" href="{{ url('/open') }}"><i class="fas fa-comments"></i> open space</a></li>
                             <li></li>
                             </ul>
                         </div>
