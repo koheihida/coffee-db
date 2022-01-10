@@ -132,7 +132,8 @@
                                 {{ $memo_show }}
                                 @endisset
                                 <div>
-                                    <form class="card-body my-card-body" action="{{ route('store') }}" method="POST">
+                                    <form class="card-body my-card-body" action="/open/store" method="POST">
+                                        @csrf
                                         <div>
                                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                         </div>

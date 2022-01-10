@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Memo;
 use App\Models\Comment;
 use DB;
+use GuzzleHttp\Psr7\Request as Psr7Request;
 
 class CommentsController extends Controller
 {
@@ -32,6 +33,20 @@ class CommentsController extends Controller
             ->whereNull('memos.deleted_at')
             ->get();
 
-        return view('open', compact('memo_show'));
+        return view('comment', compact('memo_show'));
+    }
+
+    public function create()
+    {
+        return view('comment');
+    }
+
+    public function store(Request $request)
+    {
+        Comment::new($request->all());
+        return redirect()->route('comment')->with('success', '新規登録完了しました');
+        // $comment_model = new Comment();
+        //     // $memos = $memo_model -> getMyMemo();
+        // return view('comment_model', compact('memo_model'));
     }
 }
