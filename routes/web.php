@@ -39,5 +39,5 @@ Route::get('/search', [HomeController::class, 'search'])->name('search');
 Route::get('/open', [CommentsController::class, 'index'])->name('index');
 Route::get('/open/{id}', [CommentsController::class, 'show'])->name('create');
 Route::get('/open/{id}', [CommentsController::class, 'show'])->name('show');
-Route::post('/open/store', [CommentController::class, 'store'])->name('store');
+Route::post('/open/store', [CommentsController::class, 'store'])->name('comment-store');
 

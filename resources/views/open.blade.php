@@ -132,19 +132,19 @@
                                 {{ $memo_show }}
                                 @endisset
                                 <div>
-                                    <form class="card-body my-card-body" action="/open/store" method="POST">
+                                    <form class="card-body my-card-body" action="{{ route('comment-store') }}" method="POST">
                                         @csrf
                                         <div>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='comment' placeholder="コメント入力"></textarea>
                                         </div>
-                                        <button type="submit" class="btn btn-outline-secondary">保存</button>
+                                        <button type="submit" class="btn btn-outline-secondary">投稿</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class=" col-md-6 p-0 main-blade">
-                        @yield('comment')
+                        @yield('content')
                     </div>
                 </div>
             </main>

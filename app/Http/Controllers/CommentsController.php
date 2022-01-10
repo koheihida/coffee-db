@@ -43,8 +43,23 @@ class CommentsController extends Controller
 
     public function store(Request $request)
     {
-        Comment::new($request->all());
-        return redirect()->route('comment')->with('success', '新規登録完了しました');
+        $memo_show = Memo::select('id', 'content');
+        dd($memo_show);
+            // ->where('memos.id','=',$id)
+            // ->whereNull('memos.deleted_at')
+            // ->get();
+
+        // $comments = $request->all();
+        // // $comments = Comment::new($request->all())
+        // dd($request);
+        // // ->where('memos.id','=',$id)
+        // // ->get();
+
+        // CommentDB::insert(['content' => $comments['comment'], 'user_id' => \Auth::id(), ]);
+
+
+        // return view('comment', compact('comments'));
+        // return redirect()->route('comment')->with('success', '新規登録完了しました');
         // $comment_model = new Comment();
         //     // $memos = $memo_model -> getMyMemo();
         // return view('comment_model', compact('memo_model'));
