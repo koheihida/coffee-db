@@ -14,7 +14,11 @@ class CommentsController extends Controller
 
     public function index()
     {
-        $memos = Memo::all();
+
+        $item = Memo::all();
+        // $memos = Memo::all();
+
+        // dd($memos);
         // $memos = Memo::where('content',$request->keyword)->simplePaginate(13);
         // $memos = Memo::orderBy('created_at', 'desc')->get();
 
@@ -23,39 +27,48 @@ class CommentsController extends Controller
         //     ->whereNull('memos.deleted_at')
         //     ->get();
 
-        return view('open', compact('memos'));
+        return view('open', compact('item'));
     }
 
     public function show($id)
     {
+        $item = Memo::all();
         $memo_show = Memo::select('id', 'content')
             ->where('memos.id','=',$id)
             ->whereNull('memos.deleted_at')
             ->get();
 
-        return view('comment', compact('memo_show'));
+        $memo_id = $id;
+        return view('comment', compact('memo_show', 'item', 'memo_id'));
     }
 
     public function create()
     {
+        $memo = Memo::select('id', 'content');
+
         return view('comment');
     }
 
     public function store(Request $request)
     {
-        $memo_show = Memo::select('id', 'content');
-        dd($memo_show);
+        // $memo_show = Memo::select('id', 'content')
+        // ->where('memos.id','=',$id)
+        // ->whereNull('memos.deleted_at')
+        // ->get();
+        // dd($memo_show);
+        // $memo_show = Memo::select('id', 'content');
+        // dd($memo_show);
             // ->where('memos.id','=',$id)
             // ->whereNull('memos.deleted_at')
             // ->get();
 
-        // $comments = $request->all();
-        // // $comments = Comment::new($request->all())
-        // dd($request);
-        // // ->where('memos.id','=',$id)
-        // // ->get();
+        $comments = $request->all();
 
-        // CommentDB::insert(['content' => $comments['comment'], 'user_id' => \Auth::id(), ]);
+        // ->where('memos.id','=',$id)
+        // ->get();
+
+
+        Comment::insert(['content' => $comments['comment'], 'user_id' => \Auth::id(), 'memo_id' => $comments['memo_id']]);
 
 
         // return view('comment', compact('comments'));

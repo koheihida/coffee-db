@@ -115,8 +115,10 @@
                                 </div>
                             </div>
                             <div class="card-body my-card-body ellipsis">
-                                @foreach($memos as $memo)
+                                @foreach($item as $memo)
+
                                     <div>
+                                        {{-- {{ var_dump($memo) }} --}}
                                         <a href="/open/{{ $memo['id'] }}" class="card-text d-block elipsis mb-2">{{ $memo['content'] }}</a>
                                     </div>
                                 @endforeach
@@ -128,18 +130,19 @@
                             <div class="card-header d-flex justify-content-between ellipsis">選択したメモ
                             </div>
                             <div class="card-body my-card-body ellipsis">
-                                @isset($memo_show)
-                                {{ $memo_show }}
-                                @endisset
-                                <div>
-                                    <form class="card-body my-card-body" action="{{ route('comment-store') }}" method="POST">
+                                <form class="card-body my-card-body" action="{{ route('comment-store') }}" method="POST">
+                                    @isset($memo_show)
+                                    {{ $memo_show }}
+                                    @endisset
+                                    <div>
                                         @csrf
                                         <div>
                                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='comment' placeholder="コメント入力"></textarea>
+                                            <input type="hidden" name="memo_id" value="{{ $memo_id }}">
                                         </div>
                                         <button type="submit" class="btn btn-outline-secondary">投稿</button>
-                                    </form>
-                                </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
