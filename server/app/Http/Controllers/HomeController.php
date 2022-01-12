@@ -52,7 +52,6 @@ class HomeController extends Controller
         //     $path = null;
         // }
         $request->validate(['content' => 'required']);
-        $request->validate(['tags' => 'required']);
         DB::transaction(function() use($posts)
         {
             $memo_id = Memo::insertGetId(['content'=>$posts['content'], 'user_id' =>\Auth::id() ]);
@@ -64,10 +63,10 @@ class HomeController extends Controller
             if(!empty($posts['new_tag'] || $posts['new_tag'] === "0") && !$tag_exists){
                 $tag_id = Tag::insertGetId(['user_id' => \Auth::id(), 'name'=> $posts['new_tag']]);
                 MemoTag::insert(['memo_id' => $memo_id, 'tag_id' => $tag_id]);
-        }
-            if(!empty($posts['tags'][0])){
-                foreach($posts['tags'] as $tag){
-                    MemoTag::insert(['memo_id' => $memo_id, 'tag_id' => $tag ]);
+                if(!empty($posts['tags'][0])){
+                    foreach($posts['tags'] as $tag){
+                        MemoTag::insert(['memo_id' => $memo_id, 'tag_id' => $tag ]);
+                    }
                 }
             }
         });
@@ -104,7 +103,7 @@ class HomeController extends Controller
     {
         $posts = $request->all();
         $request->validate(['content'=> 'required']);
-        $request->validate(['tags'=> 'required']);
+        $request->validate(['tags'=> 'present']);
         DB::transaction(function () use($posts)
         {
             Memo::where('id', $posts['memo_id'])
@@ -128,7 +127,7 @@ class HomeController extends Controller
         });
         Memo::where('id', $posts['memo_id'])
         ->update(['content' => $posts['content'], 'user_id' => \Auth::id()]);
-        return redirect(route('memos.home'));
+        return redirect(route('home'));
     }
 
     public function destroy(Request $request)

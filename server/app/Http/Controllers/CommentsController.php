@@ -12,9 +12,9 @@ class CommentsController extends Controller
 {
     public function index()
     {
-        $item = Memo::all();
+        $items = Memo::all();
 
-        return view('open', compact('item'));
+        return view('open', compact('items'));
     }
 
     public function show($id)
@@ -40,5 +40,7 @@ class CommentsController extends Controller
     {
         $comments = $request->all();
         Comment::insert(['content' => $comments['comment'], 'user_id' => \Auth::id(), 'memo_id' => $comments['memo_id']]);
+
+        return redirect(route('/open/{id}'));
     }
 }

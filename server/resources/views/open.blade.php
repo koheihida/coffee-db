@@ -115,11 +115,11 @@
                                 </div>
                             </div>
                             <div class="card-body my-card-body ellipsis">
-                                @foreach($item as $memo)
+                                @foreach($items as $item)
 
                                     <div>
                                         {{-- {{ var_dump($memo) }} --}}
-                                        <a href="/open/{{ $memo['id'] }}" class="card-text d-block elipsis mb-2">{{ $memo['content'] }}</a>
+                                        <a href="/open/{{ $item['id'] }}" class="card-text d-block elipsis mb-2">{{ $item['content'] }}</a>
                                     </div>
                                 @endforeach
                             </div>
