@@ -116,24 +116,26 @@
                             </div>
                             <div class="card-body my-card-body ellipsis">
                                 @foreach($items as $item)
-
                                     <div>
-                                        {{-- {{ var_dump($memo) }} --}}
                                         <a href="/open/{{ $item['id'] }}" class="card-text d-block elipsis mb-2">{{ $item['content'] }}</a>
                                     </div>
                                 @endforeach
+                                <div class="sp"></div>
+                                {{ $items->links() }}
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-3 p-0 ">
                         <div class="card">
-                            <div class="card-header d-flex justify-content-between ellipsis">選択したメモ
+                            <div class="card-header d-flex justify-content-between ">選択したメモ
                             </div>
-                            <div class="card-body my-card-body ellipsis">
+                            <div class="card-body my-card-body ">
                                 <form class="card-body my-card-body" action="{{ route('comment-store') }}" method="POST">
+                                    <div class="memo_show">
                                     @isset($memo_show)
-                                    {{ $memo_show[0]['content'] }}
+                                    <p>{{ $memo_show[0]['content'] }}</p>
                                     @endisset
+                                    </div>
                                     <div>
                                         @csrf
                                         <div>

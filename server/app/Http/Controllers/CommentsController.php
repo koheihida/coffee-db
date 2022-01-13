@@ -12,7 +12,9 @@ class CommentsController extends Controller
 {
     public function index()
     {
-        $items = Memo::all();
+        $items = Memo::whereNull('memos.deleted_at')
+        ->simplePaginate(15);
+
         $comments = Comment::all();
 
         return view('open', compact('items',));
@@ -20,7 +22,8 @@ class CommentsController extends Controller
 
     public function show($id)
     {
-        $items = Memo::all();
+        $items = Memo::whereNull('memos.deleted_at')
+            ->simplePaginate(15);
         $memo_show = Memo::select('id', 'content')
             ->where('memos.id','=',$id)
             ->whereNull('memos.deleted_at')
@@ -43,8 +46,6 @@ class CommentsController extends Controller
     {
         $comments = $request->all();
         Comment::insert(['content' => $comments['comment'], 'user_id' => \Auth::id(), 'memo_id' => $comments['memo_id']]);
-
-        // return redirect(route('/open/{memo_id}'));
         return redirect()->back();
     }
 }

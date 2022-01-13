@@ -148,6 +148,18 @@ h5{
     margin-left: 5px;
 }
 
+.sp {
+    height: 20px;
+}
+
+.memo_show{
+    width: 90%;
+    height: auto;
+}
+.memo_show p {
+    overflow-wrap: break-word;
+  }
+
 
 /* レスポンシブ */
 @media screen and (max-width:768px){

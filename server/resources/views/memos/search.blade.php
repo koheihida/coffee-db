@@ -20,12 +20,13 @@
                         <a href="/edit/{{ $search['id'] }}" class="card-text d-block elipsis mb-5">{{ $search['content'] }}</a>
                     </div>
                 @endforeach
+                <div class="sp"></div>
             </div>
-            {{ $searches->links() }}
         @else
-        <p>検索結果が見つかりませんでした。</p>
+            <p>検索結果が見つかりませんでした。</p>
         @endif
-    </div>
+        {{ $searches->links() }}
+        </div>
 </div>
 @endsection
 
