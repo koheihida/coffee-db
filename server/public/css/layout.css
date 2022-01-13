@@ -159,6 +159,9 @@ h5{
 .memo_show p {
     overflow-wrap: break-word;
   }
+.comment_show a{
+    display: inline;
+}
 
 
 /* レスポンシブ */

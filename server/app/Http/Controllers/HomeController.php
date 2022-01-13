@@ -135,7 +135,7 @@ class HomeController extends Controller
         $posts = $request->all();
         Memo::where('id', $posts['memo_id'])
         ->update(['deleted_at' => date("Y-m-d H:i:s", time())]);
-        return redirect(route('memos.home'));
+        return redirect(route('home'));
     }
 
     public function search(Request $request)

@@ -30,8 +30,8 @@ class CommentsController extends Controller
             ->get();
         $comments = Comment::where('memo_id', '=', $id)
             ->whereNull('comments.deleted_at')
-            ->get();
-        // $memo_id = $id;
+            ->simplePaginate(15);
+
         return view('comment', compact('memo_show', 'items', 'comments'));
     }
 
@@ -47,5 +47,16 @@ class CommentsController extends Controller
         $comments = $request->all();
         Comment::insert(['content' => $comments['comment'], 'user_id' => \Auth::id(), 'memo_id' => $comments['memo_id']]);
         return redirect()->back();
+    }
+
+    public function destroy(Request $request)
+    {
+        $posts = $request->all();
+        Comment::where('id', $posts['memo_id'])
+            ->where('user_id', '=', \Auth::id())
+            ->update(['deleted_at' => date("Y-m-d H:i:s", time())]);
+
+        // return redirect()->back();
+        return redirect(route('comment-index'));
     }
 }

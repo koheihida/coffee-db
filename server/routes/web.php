@@ -36,8 +36,9 @@ Route::post('/destroy', [HomeController::class, 'destroy'])->name('destroy');
 Route::get('/find', [HomeController::class, 'find'])->name('find');
 Route::get('/search', [HomeController::class, 'search'])->name('search');
 
-Route::get('/open', [CommentsController::class, 'index'])->name('index');
+Route::get('/open', [CommentsController::class, 'index'])->name('comment-index');
 Route::get('/open/{id}', [CommentsController::class, 'show'])->name('create');
 Route::get('/open/{id}', [CommentsController::class, 'show'])->name('show');
 Route::post('/open/store', [CommentsController::class, 'store'])->name('comment-store');
+Route::post('/open/destroy', [CommentsController::class, 'destroy'])->name('comment-destroy');
 
