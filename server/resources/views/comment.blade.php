@@ -12,16 +12,16 @@
             @foreach ($comments as $comment)
                 <div>
                     {{ $comment['content'] }}
-                    {{-- @if($comments['user_id']) --}}
+                    @if(Auth::id() === $comment['user_id'])
                     <form id="delete-form" action="{{ route('comment-destroy') }}" method="POST">
                         @csrf
                         <input type="hidden" name="memo_id" value="{{ $comment['id'] }}">
                         <i class="fas fa-trash-alt" onclick="deleteHandle(event)"></i>
                     </form>
-                    {{ $comment['created_at'] }}
-                    <div class="sp"></div>
-                    {{-- @endif --}}
+                    @endif
                 </div>
+                {{ $comment['created_at'] }}
+                <div class="line"></div>
             @endforeach
             </div>
             <div class="sp"></div>

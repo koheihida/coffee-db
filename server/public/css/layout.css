@@ -163,6 +163,10 @@ h5{
     display: inline;
 }
 
+.line {
+    border-bottom: 3px dashed maroon;
+}
+
 
 /* レスポンシブ */
 @media screen and (max-width:768px){
