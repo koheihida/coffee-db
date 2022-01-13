@@ -13,20 +13,23 @@ class CommentsController extends Controller
     public function index()
     {
         $items = Memo::all();
+        $comments = Comment::all();
 
-        return view('open', compact('items'));
+        return view('open', compact('items',));
     }
 
     public function show($id)
     {
-        $item = Memo::all();
+        $items = Memo::all();
         $memo_show = Memo::select('id', 'content')
             ->where('memos.id','=',$id)
             ->whereNull('memos.deleted_at')
             ->get();
-
-        $memo_id = $id;
-        return view('comment', compact('memo_show', 'item', 'memo_id'));
+        $comments = Comment::where('memo_id', '=', $id)
+            ->whereNull('comments.deleted_at')
+            ->get();
+        // $memo_id = $id;
+        return view('comment', compact('memo_show', 'items', 'comments'));
     }
 
     public function create()
@@ -41,6 +44,7 @@ class CommentsController extends Controller
         $comments = $request->all();
         Comment::insert(['content' => $comments['comment'], 'user_id' => \Auth::id(), 'memo_id' => $comments['memo_id']]);
 
-        return redirect(route('/open/{id}'));
+        // return redirect(route('/open/{memo_id}'));
+        return redirect()->back();
     }
 }

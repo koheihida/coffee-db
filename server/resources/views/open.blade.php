@@ -132,13 +132,15 @@
                             <div class="card-body my-card-body ellipsis">
                                 <form class="card-body my-card-body" action="{{ route('comment-store') }}" method="POST">
                                     @isset($memo_show)
-                                    {{ $memo_show }}
+                                    {{ $memo_show[0]['content'] }}
                                     @endisset
                                     <div>
                                         @csrf
                                         <div>
+                                            @isset($memo_show)
                                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='comment' placeholder="コメント入力"></textarea>
-                                            <input type="hidden" name="memo_id" value="{{ $memo_id }}">
+                                            <input type="hidden" name="memo_id" value="{{ $memo_show[0]['id'] }}">
+                                            @endisset
                                         </div>
                                         <button type="submit" class="btn btn-outline-secondary">投稿</button>
                                     </div>
