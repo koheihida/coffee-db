@@ -6,7 +6,7 @@
         <div class="card h-100">
             <div class="card-body my-card-body ellipsis">
             @foreach ($comments as $comment)
-                {{ $comment }}
+                {{ $comment['content'] }}
             @endforeach
             </div>
         </div>
