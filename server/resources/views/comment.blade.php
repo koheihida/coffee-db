@@ -11,13 +11,15 @@
             <div class="comment_show">
             @foreach ($comments as $comment)
                 <div>
-                    <p>{{ $comment['content'] }}</p>
+                    {{ $comment['content'] }}
                     {{-- @if($comments['user_id']) --}}
                     <form id="delete-form" action="{{ route('comment-destroy') }}" method="POST">
                         @csrf
                         <input type="hidden" name="memo_id" value="{{ $comment['id'] }}">
                         <i class="fas fa-trash-alt" onclick="deleteHandle(event)"></i>
                     </form>
+                    {{ $comment['created_at'] }}
+                    <div class="sp"></div>
                     {{-- @endif --}}
                 </div>
             @endforeach

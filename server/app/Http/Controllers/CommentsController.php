@@ -29,8 +29,9 @@ class CommentsController extends Controller
             ->whereNull('memos.deleted_at')
             ->get();
         $comments = Comment::where('memo_id', '=', $id)
+            ->orderBy('id','DESC')
             ->whereNull('comments.deleted_at')
-            ->simplePaginate(15);
+            ->simplePaginate(5);
 
         return view('comment', compact('memo_show', 'items', 'comments'));
     }
