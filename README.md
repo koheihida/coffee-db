@@ -20,26 +20,33 @@ mail:mmm@gmail
 [![Image from Gyazo](https://i.gyazo.com/0644a5a839825595f7504d3f228d7298.gif)](https://gyazo.com/0644a5a839825595f7504d3f228d7298)
 
 2、ハンバーガーメニューの導入
+
 [![Image from Gyazo](https://i.gyazo.com/ac4c3eb629cee258bd1eeb38b7a1af52.gif)](https://gyazo.com/ac4c3eb629cee258bd1eeb38b7a1af52)
 
 3、コメント機能実装
 ・コメント機能ページへ遷移
+
 [![Image from Gyazo](https://i.gyazo.com/a3fcfa6e5886cd31dbe902835632c8c2.gif)](https://gyazo.com/a3fcfa6e5886cd31dbe902835632c8c2)
 
 ・コメント投稿
+
 [![Image from Gyazo](https://i.gyazo.com/360e508a9649e7924e0c8ecf32a25d18.gif)](https://gyazo.com/360e508a9649e7924e0c8ecf32a25d18)
 
 ・コメント削除機能(投稿したアカウントでログイン時のみ削除用iconが表示されます)
+
 [![Image from Gyazo](https://i.gyazo.com/9094ed46074656c72acb6369d89fb2c6.gif)](https://gyazo.com/9094ed46074656c72acb6369d89fb2c6)
 
 4、レスポンシブ対応
 ・topページ
+
 [![Image from Gyazo](https://i.gyazo.com/fe2b2b9e5bcca338fa37f174c8bab271.gif)](https://gyazo.com/fe2b2b9e5bcca338fa37f174c8bab271)
 
 ・チェッカー
+
 [![Image from Gyazo](https://i.gyazo.com/e38efbe826ad5aee935779b978a899ba.gif)](https://gyazo.com/e38efbe826ad5aee935779b978a899ba)
 
 ・メモ/検索機能
+
 [![Image from Gyazo](https://i.gyazo.com/6507850534f444bf682ed499d6fe32b0.gif)](https://gyazo.com/6507850534f444bf682ed499d6fe32b0)
 
 # URL(aws:Lightsailにデプロイ)
