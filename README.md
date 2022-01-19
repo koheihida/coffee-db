@@ -35,8 +35,10 @@ mail:mmm@gmail
 4、レスポンシブ対応
 ・topページ
 [![Image from Gyazo](https://i.gyazo.com/fe2b2b9e5bcca338fa37f174c8bab271.gif)](https://gyazo.com/fe2b2b9e5bcca338fa37f174c8bab271)
+
 ・チェッカー
 [![Image from Gyazo](https://i.gyazo.com/e38efbe826ad5aee935779b978a899ba.gif)](https://gyazo.com/e38efbe826ad5aee935779b978a899ba)
+
 ・メモ/検索機能
 [![Image from Gyazo](https://i.gyazo.com/6507850534f444bf682ed499d6fe32b0.gif)](https://gyazo.com/6507850534f444bf682ed499d6fe32b0)
 
