@@ -70,6 +70,7 @@ class HomeController extends Controller
                 }
             }
         });
+        
         return redirect(route('home'));
     }
 
@@ -127,6 +128,7 @@ class HomeController extends Controller
         });
         Memo::where('id', $posts['memo_id'])
         ->update(['content' => $posts['content'], 'user_id' => \Auth::id()]);
+
         return redirect(route('home'));
     }
 
@@ -135,6 +137,7 @@ class HomeController extends Controller
         $posts = $request->all();
         Memo::where('id', $posts['memo_id'])
         ->update(['deleted_at' => date("Y-m-d H:i:s", time())]);
+
         return redirect(route('home'));
     }
 

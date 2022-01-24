@@ -47,6 +47,7 @@ class CommentsController extends Controller
     {
         $comments = $request->all();
         Comment::insert(['content' => $comments['comment'], 'user_id' => \Auth::id(), 'memo_id' => $comments['memo_id']]);
+
         return redirect()->back();
     }
 
@@ -57,7 +58,6 @@ class CommentsController extends Controller
             ->where('user_id', '=', \Auth::id())
             ->update(['deleted_at' => date("Y-m-d H:i:s", time())]);
 
-        // return redirect()->back();
         return redirect(route('comment-index'));
     }
 }
