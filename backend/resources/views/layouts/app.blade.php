@@ -41,7 +41,6 @@
                 </div>
                 <div class="auth">
                     <button class="navbar-toggler top_btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                        {{-- <span class="navbar-toggler-icon"></span> --}}
                         <span class="fas fa-user"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">

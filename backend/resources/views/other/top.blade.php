@@ -40,14 +40,11 @@
                     <a class="navbar-brand" href="{{ url('/') }}"><i class="fas fa-mug-hot"></i>
                     {{ config('app.name', 'Laravel') }}</a>
                 </div>
-                <button class="navbar-toggler top_btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
                 <div class="openbtn"><span></span><span></span><span></span></div>
-                    <nav id="g-nav">
-                        <div id="g-nav-list">
-                            <ul>
+                <nav id="g-nav">
+                    <div id="g-nav-list">
+                        <ul>
                             <li><a class="navbar-brand" href="image/readme.png" data-lightbox="group"><i class="fas fa-question"></i> how to use</a></li>
                             <li></li>
                             <li><a class="navbar-brand" href="{{ url('/test') }}"><i class="fas fa-coffee"></i> checker</a></li>
@@ -55,10 +52,13 @@
                             <li><a class="navbar-brand" href="image/flavorwheel.jpg" data-lightbox="group"><i class="fas fa-chart-pie"></i> flavor wheel</a></li>
                             <li><a class="navbar-brand" href="{{ url('/open') }}"><i class="fas fa-comments"></i> open space</a></li>
                             <li></li>
-                            </ul>
-                        </div>
-                    </nav>
+                        </ul>
+                    </div>
+                </nav>
                 <div class="auth">
+                    <button class="navbar-toggler top_btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                        <span class="fas fa-user"></span>
+                    </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav me-auto">
