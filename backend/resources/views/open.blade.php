@@ -140,12 +140,15 @@
                                         @csrf
                                         <div>
                                             @isset($memo_show)
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='comment' placeholder="コメント入力"></textarea>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='comment' placeholder="コメント入力">{{ old('comment') }}</textarea>
                                             <input type="hidden" name="memo_id" value="{{ $memo_show[0]['id'] }}">
                                             @endisset
                                         </div>
                                         <button type="submit" class="btn btn-outline-secondary">投稿</button>
                                     </div>
+                                    @error('comment')
+                                        <div class='alert alert-danger'> Comment is empty or over！</div>
+                                    @enderror
                                 </form>
                             </div>
                         </div>

@@ -179,7 +179,12 @@ h5{
 
     .auth{
         position: relative;
-        margin-left: 50px;
+        right: 50px;
+        height: 150px;
+    }
+
+    .auth li{
+        left: 50px;
     }
 
     .search-taxt{
@@ -192,5 +197,8 @@ h5{
 
     .elipsis{
         margin-bottom: 0%;
+    }
+    .navbar-toggler {
+        inset-block: flex;
     }
 }

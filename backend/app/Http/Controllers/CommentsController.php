@@ -46,6 +46,7 @@ class CommentsController extends Controller
     public function store(Request $request)
     {
         $comments = $request->all();
+        $request->validate(['comment' => 'required|max:49']);
         Comment::insert(['content' => $comments['comment'], 'user_id' => \Auth::id(), 'memo_id' => $comments['memo_id']]);
 
         return redirect()->back();

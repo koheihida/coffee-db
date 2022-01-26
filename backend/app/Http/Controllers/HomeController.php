@@ -70,7 +70,7 @@ class HomeController extends Controller
                 }
             }
         });
-        
+
         return redirect(route('home'));
     }
 
@@ -104,7 +104,7 @@ class HomeController extends Controller
     {
         $posts = $request->all();
         $request->validate(['content'=> 'required']);
-        $request->validate(['tags'=> 'present']);
+
         DB::transaction(function () use($posts)
         {
             Memo::where('id', $posts['memo_id'])
@@ -112,10 +112,6 @@ class HomeController extends Controller
             MemoTag::where('memo_id', '=', $posts['memo_id'])
             ->delete();
 
-            foreach($posts['tags'] as $tag)
-            {
-                MemoTag::insert(['memo_id' => $posts['memo_id'], 'tag_id' => $tag]);
-            }
             $tag_exists = Tag::where('user_id', '=', \Auth::id())
             ->where('name','=',$posts['new_tag'])
             ->exists();
