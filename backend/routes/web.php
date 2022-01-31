@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\GoogleLoginController;
+use App\Http\Controllers\TwitterLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,8 @@ Route::group(['middleware' => 'auth'], function () {
 Auth::routes();
 Route::get('/auth/redirect', [GoogleLoginController::class, 'getGoogleAuth']);
 Route::get('/login/callback', [GoogleLoginController::class, 'authGoogleCallback']);
+Route::get('auth/login/twitter', [TwitterLoginController::class, 'redirectToProvider']);
+Route::get('auth/twitter/callback',[TwitterLoginController::class, 'handleProviderCallback']);
 Route::get('/home', [HomeController::class, 'index'])->name('index');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::post('/store', [HomeController::class, 'store'])->name('store');
