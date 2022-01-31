@@ -10,6 +10,12 @@ use GuzzleHttp\Psr7\Request as Psr7Request;
 
 class CommentsController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $items = Memo::whereNull('memos.deleted_at')
