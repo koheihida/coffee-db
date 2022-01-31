@@ -31,7 +31,10 @@
                 </div>
             @endforeach
             <input type="text" class="form-control w-50 mb-5 elipsis" name="new_tag" placeholder="新しいタグ" value="{{ old('new_tag') }}">
-            
+            @error('tags')
+                <div class='alert alert-danger'> Tag is empty！</div>
+            @enderror
+
             <button type="submit" class="btn btn-outline-secondary">更新</button>
         </form>
     <div>

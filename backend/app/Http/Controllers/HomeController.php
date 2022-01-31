@@ -104,6 +104,7 @@ class HomeController extends Controller
     {
         $posts = $request->all();
         $request->validate(['content'=> 'required']);
+        $request->validate(['tags'=> 'required']);
 
         DB::transaction(function () use($posts)
         {
@@ -111,12 +112,15 @@ class HomeController extends Controller
             ->update(['content' => $posts['content']]);
             MemoTag::where('memo_id', '=', $posts['memo_id'])
             ->delete();
+            foreach ($posts['tags'] as $tag){
+                MemoTag::insert(['memo_id'=> $posts['memo_id'],'tag_id'=>$tag]);
+            }
 
             $tag_exists = Tag::where('user_id', '=', \Auth::id())
             ->where('name','=',$posts['new_tag'])
             ->exists();
 
-            if(!empty($posts['new_tag'] || $posts['new_tag'] === "0") && !$tag_exists)
+            if(!empty($posts['new_tag'] ) && !$tag_exists)
             {
                 $tag_id = Tag::insertGetId(['user_id' => \Auth::id(), 'name'=> $posts['new_tag']]);
                 MemoTag::insert(['memo_id' => $posts['memo_id'], 'tag_id' => $tag_id]);
