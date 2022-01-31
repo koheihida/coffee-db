@@ -20,13 +20,14 @@ use App\Http\Controllers\GoogleLoginController;
 Route::get('/', function () {
     return view('other.top');
 });
-Route::get('/test', function () {
-    return view('other.test');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/test', function () {
+        return view('other.test');
+    });
+    Route::get('/load', function () {
+        return view('other.loading');
+    });
 });
-Route::get('/load', function () {
-    return view('other.loading');
-});
-
 Auth::routes();
 Route::get('/auth/redirect', [GoogleLoginController::class, 'getGoogleAuth']);
 Route::get('/login/callback', [GoogleLoginController::class, 'authGoogleCallback']);
