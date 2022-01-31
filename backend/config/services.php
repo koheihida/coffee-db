@@ -36,4 +36,10 @@ return [
 	'redirect' => env('GOOGLE_CALLBACK_URL'),
     ],
 
+    "twitter" => [
+        "client_id" => env("TWITTER_AUTH_CLIENT_ID"),
+        "client_secret" => env("TWITTER_AUTH_CLIENT_SECRET"),
+        "redirect" => env("CALLBACK_URL"),
+    ],
+
 ];
