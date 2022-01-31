@@ -6,10 +6,11 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
+                <div>
+                    <a  href="{{ url('/auth/redirect') }}">　　<i class="fab fa-google"></i>　Googleアカウントでログイン　　</a>
+                    <a  href="{{ url('/auth/login/twitter') }}">　　<i class="fab fa-twitter"></i>　Twitterアカウントでログイン　　</a>
+                </div>
                 <div class="card-body">
-                    <div>
-                        <a  href="{{ url('/auth/redirect') }}">　　<i class="fab fa-google"></i>　Googleアカウントでログイン　　</a>
-                    </div>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 

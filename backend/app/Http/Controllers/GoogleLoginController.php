@@ -17,7 +17,10 @@ class GoogleLoginController extends Controller
 
     public function authGoogleCallback()
     {
-        $googleUser = Socialite::driver('google')->stateless()->user();
+        $googleUser = Socialite::driver('google')
+            ->stateless()
+            ->user();
+
         $user = User::firstOrCreate([
             'email' => $googleUser->email
         ], [
@@ -25,6 +28,6 @@ class GoogleLoginController extends Controller
             'google_id' => $googleUser->getId()
         ]);
         Auth::login($user, true);
-        return redirect('/home');
+        return redirect('/');
     }
 }

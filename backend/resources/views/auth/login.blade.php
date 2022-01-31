@@ -8,6 +8,7 @@
                 <div class="card-header">{{ __('Login') }}</div>
                 <div>
                     <a  href="{{ url('/auth/redirect') }}">　　<i class="fab fa-google"></i>　Googleアカウントでログイン　　</a>
+                    <a  href="{{ url('/auth/login/twitter') }}">　　<i class="fab fa-twitter"></i>　Twitterアカウントでログイン　　</a>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
