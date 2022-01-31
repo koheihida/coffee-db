@@ -5,6 +5,12 @@ what-kind-of-coffee??
 PHP 7.3.29
 Laravel 8.74.0
 
+# 実装期間
+PHP学習期間：約2週間
+第1実装：約2週間(Lightsailにデプロイ)
+第2実装：約3週間(AWS:EC2にデプロイ/追加実装:コメント機能・検索機能/Docker導入)
+第3実装：1日(Twitter・Google経由のログイン実装)
+
 # 最新版 URL(aws:EC2 RDS(MySQL)にデプロイ)
 https://waht-kind-of-coffee.ml/
 テスト用アカウント
@@ -14,6 +20,10 @@ mail:aaa@gmail \
 ② \
 mail:mmm@gmail \
 パスワード:mmmm2222 \
+
+# 2022/01/31 追加実装
+・ソーシャルログイン実装(Twitter・Google)
+[![Image from Gyazo](https://i.gyazo.com/bbffdd082312fda0d975cb11379981e1.gif)](https://gyazo.com/bbffdd082312fda0d975cb11379981e1)
 
 # 最新版 変更点
 1、メモの検索機能実装
