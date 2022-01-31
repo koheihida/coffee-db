@@ -32,21 +32,6 @@ class TwitterLoginController extends Controller
     */
     public function handleProviderCallback()
         {
-            // try {
-            // $twitterUser = Socialite::driver('twitter')
-            //     ->user();
-            // } catch (Exception $e) {
-            // return redirect('auth/twitter');
-            // }
-            // if(User::where('email', $twitterUser->getEmail())
-            //     ->exists()){
-            // $user = User::where('email', $twitterUser
-            //     ->getEmail())
-            //     ->first();
-            // if(!$user->twitter){
-
-            // }
-            // }else{
                 $twitterUser = Socialite::driver('twitter')
                 ->user();
 
@@ -57,12 +42,8 @@ class TwitterLoginController extends Controller
                     'twitter_id' => $twitterUser
                         ->getId()
                 ]);
-                // Auth::login($user, true);
-            // }
             Log::info('Twitterから取得しました。', ['user' => $twitterUser]);
             Auth::login($user);
-            // Auth::login($user, true);
-
             return redirect('/');
         }
 }
