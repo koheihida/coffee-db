@@ -6,7 +6,9 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
-
+                <div>
+                    <a  href="{{ url('/auth/redirect') }}">　　<i class="fab fa-google"></i>　Googleアカウントでログイン　　</a>
+                </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
