@@ -61,7 +61,7 @@ mail:mmm@gmail \
 ・メモ/検索機能 \
 [![Image from Gyazo](https://i.gyazo.com/6507850534f444bf682ed499d6fe32b0.gif)](https://gyazo.com/6507850534f444bf682ed499d6fe32b0)
 
-# URL(aws:Lightsailにデプロイ)
+# URL(aws:Lightsailにデプロイ)※現在停止中
 https://what-kind-of-coffee.link/
 テスト用アカウント
 mail：mmm@gmail
