@@ -64,8 +64,8 @@ mail:mmm@gmail \
 # URL(aws:Lightsailにデプロイ)※現在停止中
 https://what-kind-of-coffee.link/
 テスト用アカウント
-mail：mmm@gmail
-パスワード：mmmm2222
+mail：zzz@gmail
+パスワード：zzzz7777
 
 # 課題修正
 リリース後、このアプリケーションを開きたいと思うようなワクワク感がないとのコメントがあったため
